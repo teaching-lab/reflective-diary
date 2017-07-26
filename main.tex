@@ -1,5 +1,274 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+% ======= TODO LIST =======
+
+% Printing: https://tex.stackexchange.com/questions/26628/printing-a6-on-a4-paper
+
+% ======= STANDARD DOCUMENT SETTINGS AND PACKAGES ========
+
+\documentclass[twoside,openany,10pt]{book}
+\usepackage[czech]{babel}			% Language
+\usepackage[utf8]{inputenc}			% Encoding of characters in this .tex file
+\usepackage{cmap}					% Make PDF file searchable and copyable (ASCII characters)
+\usepackage{lmodern}				% Make PDF file searchable and copyable (Accented characters)
+\usepackage[T1]{fontenc}			% Hyphenate accented words
+\usepackage[a6paper, top=0.75cm, bottom=1.5cm, inner=0.75cm, outer=0.75cm]{geometry}		% Paper size and margins
+\usepackage{marginnote}				% enable margin notes
+\usepackage{rotating}				% Rotated environments (for margin headers)
+\usepackage[protrusion]{microtype}	% Better typeset results
+\usepackage{enumitem}				% Nicer enumeration lists
+\usepackage{tabularx}				% Complex tables
+\usepackage{titlesec}				% Customize chapters
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}		% Custom colors
+\usepackage{tikzsymbols}			% Smileys
+%\usepackage[colorlinks]{hyperref}	% Hyperlinks inside the document for table of contents
+
+% ======= CUSTOM DOCUMENT SETTINGS ========
+
+% Change \chapter and \section command display and spacings
+% Source: https://tex.stackexchange.com/questions/63390/how-to-decrease-spacing-before-chapter-title
+\titleformat{\chapter}[display]{\normalfont\Large\bfseries}{Týden \thechapter}{0cm}{\Large}
+\titlespacing*{\chapter}{0em}{-2em}{0em}
+\titleformat{\section}[display]{\normalfont\large\bfseries}{\sectionname}{}{\large}
+\titlespacing*{\section}{0em}{0em}{0.5em}
+
+% Remove headers and position page number in the bottom mid
+\pagestyle{plain}
+
+% Smaller spaces between enumeration lists
+\setitemize{itemsep=0em}
+
+% Disable automatic indentation, enable paragraph skip
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+
+% Custom environments
+\newcommand{\note}[1]{\textcolor{gray}{\small\itshape #1}}
+
+\newcommand{\marginsection}[3]{\marginpar{\raisebox{#2\height}{
+\begin{turn}{#1}
+%\fontfamily{phv}\selectfont 
+\bfseries \color{gray} \large
+#3\end{turn}}}}
+
+% Rule length including the margin
+\newlength{\rulelength}
+\setlength{\rulelength}{\dimexpr(\textwidth+0.5cm)\relax}
+
+% New table column types with flexible width
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+% ======= TITLE PAGE =======
+
+\title{Reflektivní deník cvičícího}
+\author{}
+\date{}
+
+% ======= DOCUMENT START =======
+
 \begin{document}
-(Type your content here.)
+\maketitle
+
+% ======= INTRODUCTION =======
+
+\chapter*{Úvod}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\newpage
+Druha strana uvodu
+
+% ======= WEEK 1 =======
+
+\newgeometry{top=0.75cm, bottom=1.5cm, inner=0.75cm, outer=1.2cm,
+			heightrounded, marginparwidth=0.5cm, marginparsep=0.3cm}
+
+\chapter{}
+\vspace*{-2em}
+
+\marginsection{90}{-2.1}{před cvičením}
+
+Čas strávený přípravou na cvičení: \hspace{1cm} hodin.\\
+\note{Příprava slidů, úkolů, pokynů, ...}
+
+Jaký je cíl tohoto cvičení? Proč to učíme? \\
+\note{Mohou ti pomoct slovesa na straně \pageref{bloom}.}
+\vspace*{1cm}
+
+Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout? \\
+\note{Myšlenka \uv{test-driven-teaching}.}
+
+Jaké precedenty chci ve cvičení nastavit? \\
+\note{Pokládání otázek, meškání, formálnost, očekávání, ...}
+\vspace*{1cm}
+
+\hspace*{-1cm}
+\rule{\rulelength}{0.4pt}
+
+\marginsection{90}{-1.2}{po cvičení}
+
+Jak jsem spokojen se cvičením?
+\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}} \\
+\note{Jaký mám já pocit? Co vidím na studentech?}
+
+Co se mi podařilo?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Co mohlo být líp?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+\newpage
+\marginsection{-90}{1}{volné poznámky}
+\vspace*{-2em}
+\note{Kolik otázek do publika jsem položil?\\
+Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
+Podařilo se ti naplnit cíl cvičení?\\
+Co je třeba do budoucna na téhle hodině změnit?\\
+Další tipy na otázky najdeš na straně \pageref{indikatory}}
+
+% ======= APPENDICES =======
+
+\restoregeometry
+\chapter*{Rubrika}
+
+\begin{tabularx}{\textwidth}{l@{}CC@{}}
+&
+Vědomá pozornost ve výuce, vědomé rozhodování, tracking &
+Schopnost interakce se skupinou, kladení otázek skupině \\
+&
+\note{Neřeším/nedokážu si při výuce ani po ní vybavit, co se děje a jaký mám záměr. Při výuce se často cítím ztracený.} &
+\note{Se skupinou spíše neinteraguju. Neptám se, nejsem si jistý že bych dostal odpověď. Nevím, jak bych studenty zapojil.} \\
+& $\bullet$ & $\bullet$ \\
+&
+\note{Někdy se mi daří uvědomovat si, jaký mám právě záměr, co právě dělám a jaký to bude mít efekt. Většinou ale nemám při výuce vědomou pozornost.} &
+\note{Jsem si vědom toho, že lze interagovat se skupinou a znám nástroje (chápu jak by to šlo). Nejsem ale zatím schopen je často používat. Někdy se dostávám do situací, kdy se skupiny ptám, ale nedostávám odpověď.} \\ \hline
+& $\bullet$ & $\bullet$ \\
+& $\bullet$ & $\bullet$ \\
+& $\bullet$ & $\bullet$ \\
+& $\bullet$ & $\bullet$ \\
+& $\bullet$ & $\bullet$ \\
+\begin{turn}{90} Mastery \end{turn}&
+\note{Během výuky jsem si téměř vždy vědom toho, co se se mnou i ve skupině děje, co dělám a jaký to bude mít efekt, kam směřuju, jsem si schopen vybavit, jak jsme se dostali do tam, kde právě jsme.} &
+\note{Se skupinou často a efektivně interaguju, ptám se způsobem, který studenty aktivuje a zapojuje. (MCQs, Kdo...?) Situace, kdy nedostávám ze skupiny odpověď dokážu obratně řešit (např. přeformulovat otázku)} \\ \hline
+\end{tabularx}
+
+\newpage
+\begin{tabularx}{\textwidth}{Xcc}
+
+\end{tabularx}
+
+\newpage
+Rubrika strana 3/4
+
+\newpage
+Rubrika strana 4/4
+
+\chapter*{Indikátory}
+\label{indikatory}
+
+\section*{Kvalitativní}
+\begin{itemize}
+\item Jaké pocity jsem měl na cvičení?
+\item Poslouchali mě studenti?
+\item Podařilo se mi dodržet časový plán?
+\item Byli studenti aktivní?
+\end{itemize}
+
+\section*{Kvantitativní}
+\begin{itemize}
+\item Kolik otázek jsem položil?
+\item Kolik otázek jsem dostal?
+\item Kolik času zůstalo navíc?
+\item O kolik minut jsem prodlužoval?
+\item Kolik úloh se vyřešilo?
+\item Kolik úkolů dostali studenti na doma?
+\item Jak dlouho jsem měl monolog?
+\item Kolik studentů přišlo na cvičení?
+\item Kolik studentů odešlo během cvičení?
+\end{itemize}
+\newpage
+
+\chapter*{Bloomova taxonomie}
+\label{bloom}
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Vzpomenout si (\textit{remember})}: retrieve relevant intformation from long term memory
+\note{-- definovat, vyjmenovat, zopakovat, popsat, rozpoznat, přiřadit pojem ke konceptu}
+
+\item \textbf{Pochopit (\textit{understand})}: construct meaning from instructional messages
+\note{-- interpretovat, reprezentovat, vysvětlit, parafrázovat, sumarizovat, uvést příklad, ilustrovat na příkladě, klasifikovat, porovnat}
+
+\item \textbf{Použít (\textit{apply})}: carry out or use a procedure in a given situation
+\note{-- vykonat, aplikovat, použít, implementovat, vyřešit uzavřený a ohraničený problém}
+
+\item \textbf{Analyzovat (\textit{analyze})}: break into parts and determine how the parts relate to one another
+\note{-- diskutovat (\uv{rozbít} na části), rozlišit, zvolit, organizovat, integrovat, strukturovat}
+
+\item \textbf{Vyhodnotit (\textit{evaluate})}: make judgements based on criteria and standards
+\note{-- zkontrolovat, detekovat, testovat, posoudit, odborně kritizovat, argumentovat}
+
+\item \textbf{Vytvořit (\textit{create})}: put elements togehter to form a coherent whole reorganize into new pattewr or structure
+\note{-- generovat, plánovat, designovat, budovat, produkovat, kreativně kombinovat prvky}
+\end{enumerate}
+
+\chapter*{Užitečné nástroje}
+
+\section*{Základní nástroje}
+\begin{enumerate}
+\item Otázky -- jasné, intonačně neutrální
+\item Samostatná práce -- odhad trvání
+\item Domácí úkoly -- předávání a hodnocení
+\end{enumerate}
+
+\section*{Alternativní nástroje dotazování se}
+\begin{enumerate}
+\item Hlasování -- kdo si myslí, že \textit{výrok}, ať \textit{akce}
+\item Kahoot
+\end{enumerate}
+
+\section*{Alternativní nástroje samostatné práce}
+\begin{enumerate}
+\item Think-Pair-Share -- sami, poté v páru
+\item Anti-problém -- řešení opaku problému
+\item Myšlenkový oblak -- co vás napadne, když sa řekne \textit{slovo}
+\item Rozcvička -- krátké opakování
+\item Skládání kartiček -- z částí sestavit celek
+\item Hry -- zábavné aktivity na danou látku
+\end{enumerate}
+
+\section*{Alternativní nástroje domácích úkolů}
+\begin{enumerate}
+\item Bonusy za splnění něčeho navíc
+\item Kontrolování úkolů studenty navzájem
+\item Společná revize vybraného domácího úkolu -- proč je řešení dobré / špatné
+\end{enumerate}
+
+\section*{Základní nástroje vysvětlování}
+\begin{enumerate}
+\item Časový plán -- kolik má která část trvat
+\item Zapojení studentů do výkladu
+\item Získávání zpětné vazby -- ujištění se, že studenti pochopili správně to, co se řeklo
+\item Praktická ukázka -- aby se museli i dívat, nejen poslouchat
+\item Slajdy (případně checkboxy na tabuli)\\ -- vizualizace aktuálního pokroku hodiny
+\item Vtip -- odlehčení atmosféry
+\end{enumerate}
+
+\chapter*{Prostor pro poznámky}
+\note{Například nejdůležitejší feedback z hospitací.}
+
+\chapter*{Prostor pro poznámky}
+\note{Na co chci myslet, když učím?}
+
+\newpage
+\vspace*{\fill}
+Verze: \today
+
+Vytvořeno pro kurz \textit{DUCIT Praktikum vedení cvičení} na Fakultě informatiky MU.
+
+Autoři: František Blahoudek, Martin Macák, Michaela Pokludová, Ondráš Přibyla, Valdemar Švábenský, Martin Ukrop
+
 \end{document}
