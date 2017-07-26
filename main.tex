@@ -54,7 +54,11 @@
 \setlength{\rulelength}{\dimexpr(\textwidth+0.5cm)\relax}
 
 % New table column types with flexible width
-\newcolumntype{C}{>{\centering\arraybackslash}X}
+%\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+% Rotated table cell
+\newcommand{\rotatedCell}[2][l]{\rotatebox{90}{\renewcommand{\arraystretch}{0.75}\begin{tabular}[#1]{@{}l}#2\end{tabular}}}
 
 % ======= TITLE PAGE =======
 
@@ -135,26 +139,29 @@ Další tipy na otázky najdeš na straně \pageref{indikatory}}
 \restoregeometry
 \chapter*{Rubrika}
 
-\begin{tabularx}{\textwidth}{l@{}CC@{}}
+Uvodny text k rubrike -- co to je, kedy a ako sa to ma pouzit.
+
+\newpage
+\begin{tabular}{@{}l@{\hspace{5pt}}C{0.45\textwidth} C{0.45\textwidth} @{}}
 &
-Vědomá pozornost ve výuce, vědomé rozhodování, tracking &
-Schopnost interakce se skupinou, kladení otázek skupině \\
-&
+\bfseries Vědomá pozornost ve výuce, vědomé rozhodování, tracking &
+\bfseries Schopnost interakce se skupinou, kladení otázek skupině \\
+\rotatebox[origin=c]{90}{Not aware} &
 \note{Neřeším/nedokážu si při výuce ani po ní vybavit, co se děje a jaký mám záměr. Při výuce se často cítím ztracený.} &
 \note{Se skupinou spíše neinteraguju. Neptám se, nejsem si jistý že bych dostal odpověď. Nevím, jak bych studenty zapojil.} \\
 & $\bullet$ & $\bullet$ \\
-&
+\rotatebox[origin=c]{90}{Novice skill} &
 \note{Někdy se mi daří uvědomovat si, jaký mám právě záměr, co právě dělám a jaký to bude mít efekt. Většinou ale nemám při výuce vědomou pozornost.} &
-\note{Jsem si vědom toho, že lze interagovat se skupinou a znám nástroje (chápu jak by to šlo). Nejsem ale zatím schopen je často používat. Někdy se dostávám do situací, kdy se skupiny ptám, ale nedostávám odpověď.} \\ \hline
+\note{Jsem si vědom toho, že lze interagovat se skupinou a znám nástroje (chápu jak by to šlo). Nejsem ale zatím schopen je často používat. Někdy se dostávám do situací, kdy se skupiny ptám, ale nedostávám odpověď.} \\
 & $\bullet$ & $\bullet$ \\
 & $\bullet$ & $\bullet$ \\
 & $\bullet$ & $\bullet$ \\
 & $\bullet$ & $\bullet$ \\
 & $\bullet$ & $\bullet$ \\
-\begin{turn}{90} Mastery \end{turn}&
+\rotatebox[origin=c]{90}{Mastery} &
 \note{Během výuky jsem si téměř vždy vědom toho, co se se mnou i ve skupině děje, co dělám a jaký to bude mít efekt, kam směřuju, jsem si schopen vybavit, jak jsme se dostali do tam, kde právě jsme.} &
-\note{Se skupinou často a efektivně interaguju, ptám se způsobem, který studenty aktivuje a zapojuje. (MCQs, Kdo...?) Situace, kdy nedostávám ze skupiny odpověď dokážu obratně řešit (např. přeformulovat otázku)} \\ \hline
-\end{tabularx}
+\note{Se skupinou často a efektivně interaguju, ptám se způsobem, který studenty aktivuje a zapojuje. (MCQs, Kdo...?) Situace, kdy nedostávám ze skupiny odpověď dokážu obratně řešit (např. přeformulovat otázku)}
+\end{tabular}
 
 \newpage
 \begin{tabularx}{\textwidth}{Xcc}
