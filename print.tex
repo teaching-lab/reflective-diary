@@ -1,0 +1,18 @@
+% Auxiliary file for printing the diary
+
+\documentclass{article}
+\usepackage[a4paper]{geometry}% http://ctan.org/pkg/geometry
+\usepackage{pdfpages}% http://ctan.org/pkg/pdfpages
+
+\begin{document}
+
+\includepdf[pages={
+44,1,42,3,2,43,4,41,
+40,5,38,7,6,39,8,37,
+36,9,34,11,10,35,12,33,
+32,13,30,15,14,31,16,29,
+28,17,26,19,18,27,20,25,
+24,21,{},{},22,23,{},{}
+},nup=2x2,frame,noautoscale]{denik}%
+
+\end{document}

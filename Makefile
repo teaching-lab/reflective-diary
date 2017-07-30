@@ -1,10 +1,21 @@
-TITLE=main
+TEXS=$(wildcard *.tex)
+PDFS=$(TEXS:.tex=.pdf)
 IMAGES=$(wildcard img/*)
 
-all: $(TITLE).pdf
+all: denik print clean
+
+denik: denik.pdf
+
+print: denik.pdf print.pdf
 
 clean:
 	rm -f *.aux *.dvi *.log *.synctex.gz *.out *.nav *.toc *.snm *.run.xml *-blx.bib *.bbl *.blg *.bcf
 
-$(TITLE).pdf: $(TITLE).tex $(IMAGES)
-	pdflatex $(TITLE)
+%.pdf : %.tex $(IMAGES)
+	pdflatex $<
+
+remake:
+	rm $(PDFS)
+	make all
+
+.PHONY: all denik print clean remake
