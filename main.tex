@@ -15,7 +15,7 @@
 \usepackage{rotating}				% Rotated environments (for margin headers)
 \usepackage[protrusion]{microtype}	% Better typeset results
 \usepackage{enumitem}				% Nicer enumeration lists
-\usepackage{tabularx}				% Complex tables
+\usepackage{ragged2e}				% Add \justify command
 \usepackage{titlesec}				% Customize chapters
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}		% Custom colors
 \usepackage{tikzsymbols}			% Smileys
@@ -49,6 +49,62 @@
 \bfseries \color{gray} \large
 #3\end{turn}}}}
 
+\newcommand{\rubricpage}[8]{
+\newpage
+\begin{tabular}{@{}>{\small}C{0.48\textwidth}>{\small}C{0.48\textwidth}@{}l@{}}
+\normalsize \bfseries #1 & \normalsize \bfseries #5 & \\[1em] \hline \\[-1.2em]
+\justify \note{Not aware:} #2 & \justify \note{Not aware:} #6 & \\[2em]
+$\bullet$ & $\bullet$ & \\
+$\bullet$ & $\bullet$ & \\
+\justify \note{Novice skill:} #3 & \justify \note{Novice skill:} #7 & \\[3em]
+$\bullet$ & $\bullet$ & \\
+$\bullet$ & $\bullet$ & \\
+$\bullet$ & $\bullet$ & \\
+$\bullet$ & $\bullet$ & \\
+$\bullet$ & $\bullet$ & \\
+\justify \note{Mastery:} #4 & \justify \note{Mastery:} #8 &
+\end{tabular}
+}
+
+\newcommand{\commonweek}{
+\chapter{}
+\vspace*{-2em}
+
+\marginsection{90}{-1}{před cvičením}
+
+Čas strávený přípravou na cvičení: \hspace{1cm} hodin.
+
+Jaký je cíl tohoto cvičení? Proč to učíme?
+\vspace*{1cm}
+
+Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout?
+
+\hspace*{-1cm}
+\rule{\rulelength}{0.4pt}
+
+\marginsection{90}{-1.2}{po cvičení}
+
+Jak jsem spokojen se cvičením?
+\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}}
+
+Co se mi podařilo?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Co mohlo být líp?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Vlastní otázka:
+
+\newpage
+\marginsection{-90}{1}{volné poznámky}
+}
+
 % Rule length including the margin
 \newlength{\rulelength}
 \setlength{\rulelength}{\dimexpr(\textwidth+0.5cm)\relax}
@@ -62,14 +118,26 @@
 
 % ======= TITLE PAGE =======
 
-\title{Reflektivní deník cvičícího}
-\author{}
-\date{}
+\title{Reflektivní deník učitele}
+\author{Kolektiv vyučujících Praktika vedení cvičení}
+\date{\today}
 
 % ======= DOCUMENT START =======
 
 \begin{document}
-\maketitle
+\begin{titlepage}
+	\centering
+    \vspace*{1cm}
+	\includegraphics[width=0.5\textwidth]{dennik}\par
+	\vspace{0.5cm}
+	{\huge\bfseries Reflektivní\\ deník učitele\par}
+	\vfill
+	\raggedright
+    \Large
+	Majitel:\par
+    \vspace{0.2cm}
+    Předmět:\par
+\end{titlepage}
 
 % ======= INTRODUCTION =======
 
@@ -80,10 +148,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 \newpage
 Druha strana uvodu
 
-% ======= WEEK 1 =======
-
 \newgeometry{top=0.75cm, bottom=1.5cm, inner=0.75cm, outer=1.2cm,
 			heightrounded, marginparwidth=0.5cm, marginparsep=0.3cm}
+
+% ======= WEEK 1 =======
 
 \chapter{}
 \vspace*{-2em}
@@ -91,7 +159,7 @@ Druha strana uvodu
 \marginsection{90}{-2.1}{před cvičením}
 
 Čas strávený přípravou na cvičení: \hspace{1cm} hodin.\\
-\note{Příprava slidů, úkolů, pokynů, ...}
+\note{Příprava slidů, úkolů, pokynů, \dots}
 
 Jaký je cíl tohoto cvičení? Proč to učíme? \\
 \note{Mohou ti pomoct slovesa na straně \pageref{bloom}.}
@@ -128,11 +196,275 @@ Co mohlo být líp?
 \newpage
 \marginsection{-90}{1}{volné poznámky}
 \vspace*{-2em}
-\note{Kolik otázek do publika jsem položil?\\
+\note{Kolik otázek do publika jsem položil(a)?\\
 Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
-Podařilo se ti naplnit cíl cvičení?\\
+Podařilo se mi naplnit cíl cvičení?\\
 Co je třeba do budoucna na téhle hodině změnit?\\
-Další tipy na otázky najdeš na straně \pageref{indikatory}}
+(Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
+
+% ======= WEEK 2 =======
+
+\chapter{}
+\vspace*{-2em}
+
+\marginsection{90}{-2.1}{před cvičením}
+
+Čas strávený přípravou na cvičení: \hspace{1cm} hodin.\\
+\note{Příprava slidů, úkolů, pokynů, \dots}
+
+Jaký je cíl tohoto cvičení? Proč to učíme? \\
+\note{Mohou ti pomoct slovesa na straně \pageref{bloom}.}
+\vspace*{1cm}
+
+Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout? \\
+\note{Myšlenka \uv{test-driven-teaching}.}
+
+Jaké precedenty chci ve cvičení nastavit? \\
+\note{Pokládání otázek, meškání, formálnost, očekávání, ...}
+\vspace*{1cm}
+
+\hspace*{-1cm}
+\rule{\rulelength}{0.4pt}
+
+\marginsection{90}{-1.2}{po cvičení}
+
+Jak jsem spokojen se cvičením?
+\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}} \\
+\note{Jaký mám já pocit? Co vidím na studentech?}
+
+Co se mi podařilo?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Co mohlo být líp?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+\newpage
+\marginsection{-90}{1}{volné poznámky}
+\vspace*{-2em}
+\note{Kolik otázek do publika jsem položil(a)?\\
+Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
+Podařilo se mi naplnit cíl cvičení?\\
+Co je třeba do budoucna na téhle hodině změnit?\\
+(Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
+
+% ======= WEEK 3 =======
+
+\chapter{}
+\vspace*{-2em}
+
+\marginsection{90}{-1}{před cvičením}
+
+Čas strávený přípravou na cvičení: \hspace{1cm} hodin.\\
+\note{Příprava slidů, úkolů, pokynů, \dots}
+
+Jaký je cíl tohoto cvičení? Proč to učíme? \\
+\note{Mohou ti pomoct slovesa na straně \pageref{bloom}.}
+\vspace*{1cm}
+
+Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout? \\
+\note{Myšlenka \uv{test-driven-teaching}.}
+
+\hspace*{-1cm}
+\rule{\rulelength}{0.4pt}
+
+\marginsection{90}{-1.2}{po cvičení}
+
+Jak jsem spokojen se cvičením?
+\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}} \\
+\note{Jaký mám já pocit? Co vidím na studentech?}
+
+Co se mi podařilo?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Co mohlo být líp?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+\note{Sem napiš otázku, na kterou si chceš po cvičení odpovědět.}\\
+Vlastní otázka:
+
+\newpage
+\marginsection{-90}{1}{volné poznámky}
+\vspace*{-2em}
+\note{Kolik otázek do publika jsem položil(a)?\\
+Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
+Podařilo se mi naplnit cíl cvičení?\\
+Co je třeba do budoucna na téhle hodině změnit?\\
+(Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
+
+% ======= WEEK 4 =======
+
+\chapter{}
+\vspace*{-2em}
+
+\marginsection{90}{-1}{před cvičením}
+
+Čas strávený přípravou na cvičení: \hspace{1cm} hodin.\\
+\note{Příprava slidů, úkolů, pokynů, \dots}
+
+Jaký je cíl tohoto cvičení? Proč to učíme? \\
+\note{Mohou ti pomoct slovesa na straně \pageref{bloom}.}
+\vspace*{1cm}
+
+Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout? \\
+\note{Myšlenka \uv{test-driven-teaching}.}
+
+\hspace*{-1cm}
+\rule{\rulelength}{0.4pt}
+
+\marginsection{90}{-1.2}{po cvičení}
+
+Jak jsem spokojen se cvičením?
+\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}} \\
+\note{Jaký mám já pocit? Co vidím na studentech?}
+
+Co se mi podařilo?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Co mohlo být líp?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+\note{Sem napiš otázku, na kterou si chceš po cvičení odpovědět.}\\
+Vlastní otázka:
+
+\newpage
+\marginsection{-90}{1}{volné poznámky}
+\vspace*{-2em}
+\note{Kolik otázek do publika jsem položil(a)?\\
+Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
+Podařilo se mi naplnit cíl cvičení?\\
+Co je třeba do budoucna na téhle hodině změnit?\\
+(Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
+
+% ======= WEEK 5 =======
+\commonweek
+
+% ======= WEEK 6 =======
+\commonweek
+
+% ======= WEEK 7 =======
+\commonweek
+
+% ======= WEEK 8 =======
+\commonweek
+
+% ======= WEEK 9 =======
+\commonweek
+
+% ======= WEEK 10 =======
+\commonweek
+
+% ======= WEEK 11 =======
+\commonweek
+
+% ======= WEEK 12 =======
+
+\chapter{}
+\vspace*{-2em}
+
+\marginsection{90}{-1}{před cvičením}
+
+Čas strávený přípravou na cvičení: \hspace{1cm} hodin.
+
+Jaký je cíl tohoto cvičení? Proč to učíme?
+\vspace*{1cm}
+
+Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout?
+
+\hspace*{-1cm}
+\rule{\rulelength}{0.4pt}
+
+\marginsection{90}{-1.2}{po cvičení}
+
+Jak jsem spokojen se cvičením?
+\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}}
+
+Co se mi podařilo?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Co mohlo být líp?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Otázka 12:\\
+\note{Notes.}
+
+\newpage
+\marginsection{-90}{1}{volné poznámky}
+\vspace*{-2em}
+\note{Kolik otázek do publika jsem položil(a)?\\
+Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
+Podařilo se mi naplnit cíl cvičení?\\
+Co je třeba do budoucna na téhle hodině změnit?\\
+(Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
+
+% ======= WEEK 13 =======
+
+\chapter{}
+\vspace*{-2em}
+
+\marginsection{90}{-1}{před cvičením}
+
+Čas strávený přípravou na cvičení: \hspace{1cm} hodin.
+
+Jaký je cíl tohoto cvičení? Proč to učíme?
+\vspace*{1cm}
+
+Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout?
+
+\hspace*{-1cm}
+\rule{\rulelength}{0.4pt}
+
+\marginsection{90}{-1.2}{po cvičení}
+
+Jak jsem spokojen se cvičením?
+\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}}
+
+Co se mi podařilo?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Co mohlo být líp?
+\begin{enumerate}
+\item 
+\item
+\end{enumerate}
+
+Otázka 13:\\
+\note{Notes.}
+
+\newpage
+\marginsection{-90}{1}{volné poznámky}
+\vspace*{-2em}
+\note{Kolik otázek do publika jsem položil(a)?\\
+Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
+Podařilo se mi naplnit cíl cvičení?\\
+Co je třeba do budoucna na téhle hodině změnit?\\
+(Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
 
 % ======= APPENDICES =======
 
@@ -140,39 +472,75 @@ Další tipy na otázky najdeš na straně \pageref{indikatory}}
 \chapter*{Rubrika}
 
 Uvodny text k rubrike -- co to je, kedy a ako sa to ma pouzit.
+\begin{itemize}
+\item Co to je?
+\item Ako to pouzit? (2-3x za rok si vyplnit vsetky skaly, kde sa aktualne nechadzam? Vybrat si 1-2 oblasti, kde sa chcem zlepsit, vymysliet konkretne kroky, najst si indikatory na sledovanie stavu, napisat si ich do stran k tyzdnom?)
+\item Ine pouzitie: Moznost precitat si Mastery popisy a uvedomit si, co vsetko ucitel robi/mal by robit.
+\end{itemize}
 
 \newpage
-\begin{tabular}{@{}l@{\hspace{5pt}}C{0.45\textwidth} C{0.45\textwidth} @{}}
-&
-\bfseries Vědomá pozornost ve výuce, vědomé rozhodování, tracking &
-\bfseries Schopnost interakce se skupinou, kladení otázek skupině \\
-\rotatebox[origin=c]{90}{Not aware} &
-\note{Neřeším/nedokážu si při výuce ani po ní vybavit, co se děje a jaký mám záměr. Při výuce se často cítím ztracený.} &
-\note{Se skupinou spíše neinteraguju. Neptám se, nejsem si jistý že bych dostal odpověď. Nevím, jak bych studenty zapojil.} \\
-& $\bullet$ & $\bullet$ \\
-\rotatebox[origin=c]{90}{Novice skill} &
-\note{Někdy se mi daří uvědomovat si, jaký mám právě záměr, co právě dělám a jaký to bude mít efekt. Většinou ale nemám při výuce vědomou pozornost.} &
-\note{Jsem si vědom toho, že lze interagovat se skupinou a znám nástroje (chápu jak by to šlo). Nejsem ale zatím schopen je často používat. Někdy se dostávám do situací, kdy se skupiny ptám, ale nedostávám odpověď.} \\
-& $\bullet$ & $\bullet$ \\
-& $\bullet$ & $\bullet$ \\
-& $\bullet$ & $\bullet$ \\
-& $\bullet$ & $\bullet$ \\
-& $\bullet$ & $\bullet$ \\
-\rotatebox[origin=c]{90}{Mastery} &
-\note{Během výuky jsem si téměř vždy vědom toho, co se se mnou i ve skupině děje, co dělám a jaký to bude mít efekt, kam směřuju, jsem si schopen vybavit, jak jsme se dostali do tam, kde právě jsme.} &
-\note{Se skupinou často a efektivně interaguju, ptám se způsobem, který studenty aktivuje a zapojuje. (MCQs, Kdo...?) Situace, kdy nedostávám ze skupiny odpověď dokážu obratně řešit (např. přeformulovat otázku)}
-\end{tabular}
+\rubricpage{Vědomá pozornost a rozhodování, \textit{tracking}}
+{Nedokážu si při výuce ani po ní vybavit, co se děje a jaký mám záměr. Při výuce se často cítím ztracený.}
+{Někdy se mi daří uvědomovat si, jaký mám právě záměr, co právě dělám a jaký to bude mít efekt. Většinou ale nemám při výuce vědomou pozornost.}
+{Během výuky jsem si téměř vždy vědom toho, co se se mnou i se skupinou děje, co dělám a jaký to bude mít efekt, kam směřuji. Jsem schopen si vybavit, jak jsme se dostali do tam, kde právě jsme.}
+{Interakce se skupinou, kladení otázek skupině}
+{Se skupinou neinteraguji. Neptám se, asi bych nedostal odpověď. Nevím, jak studenty dobře zapojit.}
+{Vím, že lze interagovat se skupinou a znám nástroje (chápu, jak by to šlo). Nejsem ale schopen je často používat. Někdy  se skupiny ptám, ale nedostávám odpověď.}
+{Se skupinou často a efektivně interaguji, ptám se způsobem, který studenty aktivizuje a zapojuje. Situace, kdy nedostávám ze skupiny odpověď dokážu obratně řešit (např. přeformulováním otázky).}
 
-\newpage
-\begin{tabularx}{\textwidth}{Xcc}
+\rubricpage{Strukturování výuky}
+{O strukturování výuky nijak nepřemýšlím.}
+{Chápu smysl přehledného strukturování své hodiny a snažím se o to. Často se ale zamotám, ztratím nit, nebo řeším mnoho naráz a studenti se pak ztrácí nebo odpojují.}
+{Moje cvičení mají jasnou strukturu. Studenti ví co se právě děje, co bude následovat a chápou návaznosti. Mezi jednotlivými bloky vědomě dělám zřetelné přechody.}
+{Vlastní pocit z výuky}
+{Svou výuku nijak nereflektuji.}
+{Ve výuce si často moc nevěřím, vyžaduje to hodně energie, nebo se cítím napjatý. Mám strach z toho, na co se studenti zeptají.}
+{Ve výuce se většinou cítím uvolněně a sebevědomě, mám svůj styl a baví mě to.}
 
-\end{tabularx}
+\rubricpage{Formativní zpětná vazba studentům}
+{O dávání zpětné vazby studentům nijak nepřemýšlím.}
+{Snažím se studentům zpětnou vazbu dávat. Myslím si však, že jí není dost, nebo to nedělám efektivně, nebo to studenti nevnímají jako podporu a projev respektu.}
+{Se studenty ve výuce interaguji tak, že dostávají průběžně formativní zpětnou vazbu. Chápou tedy, co jim jde, kde dělají chyby a jak se mohou zlepšovat. Zároveň se moji studenti cítí být respektováni a zpětné vazby se nebojí.}
+{Jasné zadávání úloh}
+{O zadávání úloh nijak zvlášť nepřemýšlím.}
+{Stává se mi, že zadám úlohu a studenti neví, co dělat, jak začít nebo k čemu mají dojít (co má být výsledkem).}
+{Když zadávám úlohu nebo aktivitu, mají studenti jasno v tom, co mají dělat a neřeší tak zbytečně věci, které nemám záměr procvičovat.}
 
-\newpage
-Rubrika strana 3/4
+\rubricpage{Design výuky a variabilita aktivit}
+{Učím tak, jak mi řekli nebo kopíruji výuku, kterou jsem viděl. Nepřemýšlím o jiných variantách.}
+{Jsem si vědom toho, že existuje mnoho typů aktivit, které lze při výuce použít. Neznám jich ale dostatek, nejsem je schopen efektivně zadávat, nebo nemám jasno v tom proč je vybírat.}
+{Znám dostatek typů aktivit, svou výuku skládám tak, aby byla dostatečně pestrá. Vybrané aktivity efektivně učí/procvičují to, co mám záměr procvičovat. Vybrané aktivity zároveň studenty efektivně zapojují a přispívají k jejich motivaci.}
+{Širší kontext výuky a konkrétního cvičení}
+{O širším kontextu cvičení nepřemýšlím.}
+{Uvědomuji si, že nemám pro sebe pojmenované znalosti a dovednosti, které u studentů rozvíjím. Nevím, jak jejich pokrok sledovat. Nevím, v jakém kontextu to studenti využijí.}
+{Mám jasnou představu o tom, k čemu studenty vedu, jaké dovednosti rozvíjím, jaké znalosti jim chci předat. Vím, proč tyto dovednosti rozvíjím a v jakém kontextu je studenti v budoucnu použijí. Vím, jak jejich pokrok sledovat.}
 
-\newpage
-Rubrika strana 4/4
+\rubricpage{Jasné vysvětlování}
+{Svoje vysvětlování nijak nereflektuji.}
+{Když vysvětluji, běžně se mi stává, že si nejsem jistý, zda vysvětluji dobře a zda to studentům pomáhá při pochopení.}
+{Když vysvětluji teorii, demonstruji řešení nebo opravuji chybný postup. Dělám to efektivně a dokážu se dobře vžít do toho, jak to vidí student. Nestává se mi, že by studenti moje vysvětlení nechápali, nebo že bych vysvětloval něco, na co se neptali.}
+{Nastavení prostředí, systémy ve výuce}
+{O nastavení atmosféry nepřemýšlím, systémy ve své výuce nevnímám.}
+{Přemýšlím o nastavení pravidel i atmosféry. Systémy ve výuce (např. bodování) přebírám od ostatních. Nemám ale jasno v efektech, nebo neznám způsoby, jak bych je mohl upravit.}
+{Umím ve výuce vytvořit prostředí, které podporuje efektivní učení. U systémů, které používám (např. bodování, bonbóny, zahajovací rituály) chápu efekt. Systémy nepřebírám slepě, chápu jejich účel a uzpůsobuji podle svých potřeb.}
+
+\rubricpage{Improvizace, přizpůsobování}
+{V průběhu své výuky na vzniklé situace nijak vědomě nereaguji.}
+{Uvědomuji si chvíle, kdy by mohlo být zajímavé nebo užitečné dělat něco jiného, než jsem měl v plánu. Většinou ale nedokážu v daný moment vhodně zareagovat.}
+{Jsem schopen svoji výuku průběžně přizpůsobovat tomu, co se právě děje ve skupině a co studenti potřebují. Mám k tomu dostatek nástrojů a dokážu je efektivně použít.}
+{Individuální interakce se studenty}
+{O konzultacích nijak vědomě nepřemýšlím.}
+{Stává se mi, že si nevím rady při individuální interakci se studentem (např. u tabule, konzultace). Interakce neprobíhá efektivně nebo se student cítí zastrašen.}
+{Při interakcích s jednotlivci (např. u tabule, konzultace) efektivně využívám čas. Studenti se mnou konzultují rádi, cítí ze mě respekt a podporu.}
+
+\rubricpage{Management skupiny, \textit{subgrouping}}
+{Přijde mi, že dělit skupinu je zbytečnost, o~práci v~menších skupinkách nepřemýšlím.}
+{Uvědomuji si možnosti práce ve dvojicích či menších skupinách. Tuším, že bych toho mohl lépe využívat, hledám jak.}
+{Mám jasno v tom, kdy chci pracovat se skupinou jako celkem, kdy s jednotlivci a kdy se skupinkami. Rozdělení do menších skupin efektivně používám. Ve vhodných případech zadávám interakce mezi skupinami.}
+{Čtení skupiny}
+{Skupinu ve svém cvičení nesleduji, pozornost věnuji pouze obsahu.}
+{Uvědomuji si, že mi skupina vysílá signály a že by bylo dobré jim rozumět a využít je pro efektivní vedení cvičení. Ve výuce to ale dokážu jen výjimečně.}
+{Dokážu dobře odhadnout naladění skupiny. Mám jasno v tom, co se ve skupině studentů děje (např. únava, rezignace, zájem).}
 
 \chapter*{Indikátory}
 \label{indikatory}
@@ -203,23 +571,29 @@ Rubrika strana 4/4
 \label{bloom}
 
 \begin{enumerate}[leftmargin=*]
-\item \textbf{Vzpomenout si (\textit{remember})}: retrieve relevant intformation from long term memory
-\note{-- definovat, vyjmenovat, zopakovat, popsat, rozpoznat, přiřadit pojem ke konceptu}
+\item \textbf{Vzpomenout si (\textit{remember})}\\
+\note{termíny a fakta, jejich klasifikace a kategorizace}\\
+{\small definovat, vyjmenovat, zopakovat, popsat, rozpoznat, přiřadit pojem ke konceptu}
 
-\item \textbf{Pochopit (\textit{understand})}: construct meaning from instructional messages
-\note{-- interpretovat, reprezentovat, vysvětlit, parafrázovat, sumarizovat, uvést příklad, ilustrovat na příkladě, klasifikovat, porovnat}
+\item \textbf{Pochopit (\textit{understand})}\\
+\note{překlad do jiné formy, jednoduchá interpretace, extrapolace}\\
+{\small interpretovat, reprezentovat, vysvětlit, parafrázovat, sumarizovat, uvést příklad, ilustrovat na příkladě, porovnat}
 
-\item \textbf{Použít (\textit{apply})}: carry out or use a procedure in a given situation
-\note{-- vykonat, aplikovat, použít, implementovat, vyřešit uzavřený a ohraničený problém}
+\item \textbf{Použít (\textit{apply})}\\
+\note{užití postupu ve správné situaci, použití abstrakcí a zobecnění}\\
+{\small vykonat, aplikovat, použít, implementovat, vyřešit uzavřený a ohraničený problém}
 
-\item \textbf{Analyzovat (\textit{analyze})}: break into parts and determine how the parts relate to one another
-\note{-- diskutovat (\uv{rozbít} na části), rozlišit, zvolit, organizovat, integrovat, strukturovat}
+\item \textbf{Analyzovat (\textit{analyze})}\\
+\note{rozklad na části, vztahy a interakce mezi částmi}\\
+{\small diskutovat (\uv{rozbít} na části), rozlišit, zvolit, organizovat, integrovat, strukturovat}
 
-\item \textbf{Vyhodnotit (\textit{evaluate})}: make judgements based on criteria and standards
-\note{-- zkontrolovat, detekovat, testovat, posoudit, odborně kritizovat, argumentovat}
+\item \textbf{Vyhodnotit (\textit{evaluate})}\\
+\note{posouzení na základě stanovených kritérií a standardů}\\
+{\small zkontrolovat, detekovat, testovat, posoudit, odborně kritizovat, argumentovat}
 
-\item \textbf{Vytvořit (\textit{create})}: put elements togehter to form a coherent whole reorganize into new pattewr or structure
-\note{-- generovat, plánovat, designovat, budovat, produkovat, kreativně kombinovat prvky}
+\item \textbf{Vytvořit (\textit{create})}\\
+\note{vytvoření nového celku, reorganizace do nové struktury}\\
+{\small generovat, plánovat, designovat, budovat, produkovat, kreativně kombinovat prvky}
 \end{enumerate}
 
 \chapter*{Užitečné nástroje}
@@ -276,6 +650,6 @@ Verze: \today
 
 Vytvořeno pro kurz \textit{DUCIT Praktikum vedení cvičení} na Fakultě informatiky MU.
 
-Autoři: František Blahoudek, Martin Macák, Michaela Pokludová, Ondráš Přibyla, Valdemar Švábenský, Martin Ukrop
+Autoři: František Blahoudek?, Martin Macák, Michaela Pokludová?, Ondráš Přibyla, Valdemar Švábenský, Martin Ukrop
 
 \end{document}
