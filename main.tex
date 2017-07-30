@@ -25,7 +25,7 @@
 
 % Change \chapter and \section command display and spacings
 % Source: https://tex.stackexchange.com/questions/63390/how-to-decrease-spacing-before-chapter-title
-\titleformat{\chapter}[display]{\normalfont\Large\bfseries}{Týden \thechapter}{0cm}{\Large}
+\titleformat{\chapter}[display]{\normalfont\Large\bfseries}{Týden \thechapter}{0em}{\Large}
 \titlespacing*{\chapter}{0em}{-2em}{0em}
 \titleformat{\section}[display]{\normalfont\large\bfseries}{\sectionname}{}{\large}
 \titlespacing*{\section}{0em}{0em}{0.5em}
@@ -45,7 +45,7 @@
 
 \newcommand{\marginsection}[3]{\marginpar{\raisebox{#2\height}{
 \begin{turn}{#1}
-%\fontfamily{phv}\selectfont 
+%\fontfamily{phv}\selectfont
 \bfseries \color{gray} \large
 #3\end{turn}}}}
 
@@ -53,7 +53,7 @@
 \newpage
 \begin{tabular}{@{}>{\small}C{0.48\textwidth}>{\small}C{0.48\textwidth}@{}l@{}}
 \normalsize \bfseries #1 & \normalsize \bfseries #5 & \\[1em] \hline \\[-1.2em]
-\justify \note{Not aware:} #2 & \justify \note{Not aware:} #6 & \\[2em]
+	\justify \note{Not aware:} #2 & \justify \note{Not aware:} #6 & \\[2em]
 $\bullet$ & $\bullet$ & \\
 $\bullet$ & $\bullet$ & \\
 \justify \note{Novice skill:} #3 & \justify \note{Novice skill:} #7 & \\[3em]
@@ -89,13 +89,13 @@ Jak jsem spokojen se cvičením?
 
 Co se mi podařilo?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
 Co mohlo být líp?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
@@ -143,7 +143,14 @@ Vlastní otázka:
 
 \chapter*{Úvod}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+TODO napisat uvodne slovo
+
+\begin{itemize}
+\item Co je to Reflektivni denik ucitele?
+\item Ako s nim pracovat?
+\item Preco vznikol? + Kontakt na autorov
+\item TODO nejake dalsie napady, co stoji za to mat tu napisane?
+\end{itemize}
 
 \newpage
 Druha strana uvodu
@@ -183,13 +190,13 @@ Jak jsem spokojen se cvičením?
 
 Co se mi podařilo?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
 Co mohlo být líp?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
@@ -198,8 +205,6 @@ Co mohlo být líp?
 \vspace*{-2em}
 \note{Kolik otázek do publika jsem položil(a)?\\
 Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
-Podařilo se mi naplnit cíl cvičení?\\
-Co je třeba do budoucna na téhle hodině změnit?\\
 (Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
 
 % ======= WEEK 2 =======
@@ -234,13 +239,13 @@ Jak jsem spokojen se cvičením?
 
 Co se mi podařilo?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
 Co mohlo být líp?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
@@ -249,8 +254,6 @@ Co mohlo být líp?
 \vspace*{-2em}
 \note{Kolik otázek do publika jsem položil(a)?\\
 Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
-Podařilo se mi naplnit cíl cvičení?\\
-Co je třeba do budoucna na téhle hodině změnit?\\
 (Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
 
 % ======= WEEK 3 =======
@@ -260,15 +263,12 @@ Co je třeba do budoucna na téhle hodině změnit?\\
 
 \marginsection{90}{-1}{před cvičením}
 
-Čas strávený přípravou na cvičení: \hspace{1cm} hodin.\\
-\note{Příprava slidů, úkolů, pokynů, \dots}
+Čas strávený přípravou na cvičení: \hspace{1cm} hodin.
 
-Jaký je cíl tohoto cvičení? Proč to učíme? \\
-\note{Mohou ti pomoct slovesa na straně \pageref{bloom}.}
+Jaký je cíl tohoto cvičení? Proč to učíme?
 \vspace*{1cm}
 
-Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout? \\
-\note{Myšlenka \uv{test-driven-teaching}.}
+Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout?
 
 \hspace*{-1cm}
 \rule{\rulelength}{0.4pt}
@@ -276,18 +276,17 @@ Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout? \\
 \marginsection{90}{-1.2}{po cvičení}
 
 Jak jsem spokojen se cvičením?
-\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}} \\
-\note{Jaký mám já pocit? Co vidím na studentech?}
+\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}}
 
 Co se mi podařilo?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
 Co mohlo být líp?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
@@ -297,9 +296,7 @@ Vlastní otázka:
 \newpage
 \marginsection{-90}{1}{volné poznámky}
 \vspace*{-2em}
-\note{Kolik otázek do publika jsem položil(a)?\\
-Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
-Podařilo se mi naplnit cíl cvičení?\\
+\note{Podařilo se mi naplnit cíl cvičení?\\
 Co je třeba do budoucna na téhle hodině změnit?\\
 (Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
 
@@ -310,15 +307,12 @@ Co je třeba do budoucna na téhle hodině změnit?\\
 
 \marginsection{90}{-1}{před cvičením}
 
-Čas strávený přípravou na cvičení: \hspace{1cm} hodin.\\
-\note{Příprava slidů, úkolů, pokynů, \dots}
+Čas strávený přípravou na cvičení: \hspace{1cm} hodin.
 
-Jaký je cíl tohoto cvičení? Proč to učíme? \\
-\note{Mohou ti pomoct slovesa na straně \pageref{bloom}.}
+Jaký je cíl tohoto cvičení? Proč to učíme?
 \vspace*{1cm}
 
-Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout? \\
-\note{Myšlenka \uv{test-driven-teaching}.}
+Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout?
 
 \hspace*{-1cm}
 \rule{\rulelength}{0.4pt}
@@ -326,18 +320,17 @@ Zamyšlení: Jak poznáš, že se toho podařilo dosáhnout? \\
 \marginsection{90}{-1.2}{po cvičení}
 
 Jak jsem spokojen se cvičením?
-\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}} \\
-\note{Jaký mám já pocit? Co vidím na studentech?}
+\raisebox{-0.3em}{\quad\Changey[2]{-2}\,\,\Changey[2]{-1}\,\,\Changey[2]{0}\,\,\Changey[2]{1}\,\,\Changey[2]{2}}
 
 Co se mi podařilo?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
 Co mohlo být líp?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
@@ -347,9 +340,7 @@ Vlastní otázka:
 \newpage
 \marginsection{-90}{1}{volné poznámky}
 \vspace*{-2em}
-\note{Kolik otázek do publika jsem položil(a)?\\
-Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
-Podařilo se mi naplnit cíl cvičení?\\
+\note{Podařilo se mi naplnit cíl cvičení?\\
 Co je třeba do budoucna na téhle hodině změnit?\\
 (Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
 
@@ -398,27 +389,25 @@ Jak jsem spokojen se cvičením?
 
 Co se mi podařilo?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
 Co mohlo být líp?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
-Otázka 12:\\
-\note{Notes.}
+Jaký je širší kontext toho, co učím?\\
+\note{Kde v mojí výuce se dotýkám jiné výuky, jiných oblastí vědění?}
 
 \newpage
 \marginsection{-90}{1}{volné poznámky}
 \vspace*{-2em}
-\note{Kolik otázek do publika jsem položil(a)?\\
-Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
-Podařilo se mi naplnit cíl cvičení?\\
-Co je třeba do budoucna na téhle hodině změnit?\\
-(Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
+\note{Jak získám od studentů zpětnou vazbu na ty aspekty mé vyúky, které mě zajímají?\\
+Jak to dělají ostatní cvičící?\\
+A jak jiné předměty?}
 
 % ======= WEEK 13 =======
 
@@ -444,38 +433,36 @@ Jak jsem spokojen se cvičením?
 
 Co se mi podařilo?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
 Co mohlo být líp?
 \begin{enumerate}
-\item 
+\item
 \item
 \end{enumerate}
 
-Otázka 13:\\
-\note{Notes.}
+Co mi dal tento semestr výuky?\\
+\note{Co jsem si uvědomil? Co jsem zlepšil?}
 
 \newpage
 \marginsection{-90}{1}{volné poznámky}
 \vspace*{-2em}
-\note{Kolik otázek do publika jsem položil(a)?\\
-Kolik otázek položili studenti mně? Je to málo/dost/příliš?\\
-Podařilo se mi naplnit cíl cvičení?\\
-Co je třeba do budoucna na téhle hodině změnit?\\
-(Další tipy na otázky najdeš na straně \pageref{indikatory}.)}
+\note{Za co jsou studenti v pŕedmětu hodnocení?\\
+Odpovídá to, co zkouška testuje tomu, co já učím?}
 
 % ======= APPENDICES =======
 
 \restoregeometry
 \chapter*{Rubrika}
 
-Uvodny text k rubrike -- co to je, kedy a ako sa to ma pouzit.
+TODO Uvodny text k rubrike -- co to je, kedy a ako sa to ma pouzit.
 \begin{itemize}
 \item Co to je?
 \item Ako to pouzit? (2-3x za rok si vyplnit vsetky skaly, kde sa aktualne nechadzam? Vybrat si 1-2 oblasti, kde sa chcem zlepsit, vymysliet konkretne kroky, najst si indikatory na sledovanie stavu, napisat si ich do stran k tyzdnom?)
 \item Ine pouzitie: Moznost precitat si Mastery popisy a uvedomit si, co vsetko ucitel robi/mal by robit.
+\item TODO Nejake dalsie napady, co sem napisat?
 \end{itemize}
 
 \newpage
@@ -514,6 +501,7 @@ Uvodny text k rubrike -- co to je, kedy a ako sa to ma pouzit.
 {O širším kontextu cvičení nepřemýšlím.}
 {Uvědomuji si, že nemám pro sebe pojmenované znalosti a dovednosti, které u studentů rozvíjím. Nevím, jak jejich pokrok sledovat. Nevím, v jakém kontextu to studenti využijí.}
 {Mám jasnou představu o tom, k čemu studenty vedu, jaké dovednosti rozvíjím, jaké znalosti jim chci předat. Vím, proč tyto dovednosti rozvíjím a v jakém kontextu je studenti v budoucnu použijí. Vím, jak jejich pokrok sledovat.}
+\vspace*{-1em}
 
 \rubricpage{Jasné vysvětlování}
 {Svoje vysvětlování nijak nereflektuji.}
@@ -544,6 +532,8 @@ Uvodny text k rubrike -- co to je, kedy a ako sa to ma pouzit.
 
 \chapter*{Indikátory}
 \label{indikatory}
+\vspace{-0.5em}
+\note{TODO: Strucne povedat, co su to indikatory}
 
 \section*{Kvalitativní}
 \begin{itemize}
@@ -551,6 +541,7 @@ Uvodny text k rubrike -- co to je, kedy a ako sa to ma pouzit.
 \item Poslouchali mě studenti?
 \item Podařilo se mi dodržet časový plán?
 \item Byli studenti aktivní?
+\item TODO
 \end{itemize}
 
 \section*{Kvantitativní}
@@ -564,11 +555,15 @@ Uvodny text k rubrike -- co to je, kedy a ako sa to ma pouzit.
 \item Jak dlouho jsem měl monolog?
 \item Kolik studentů přišlo na cvičení?
 \item Kolik studentů odešlo během cvičení?
+\item TODO
 \end{itemize}
 \newpage
 
 \chapter*{Bloomova taxonomie}
 \label{bloom}
+\vspace{-0.5em}
+\note{Kognitivní část hierarchie vzdělávacích cílů, B.\ Bloom, 1956}
+\vspace{-0.3em}
 
 \begin{enumerate}[leftmargin=*]
 \item \textbf{Vzpomenout si (\textit{remember})}\\
@@ -598,45 +593,47 @@ Uvodny text k rubrike -- co to je, kedy a ako sa to ma pouzit.
 
 \chapter*{Užitečné nástroje}
 
+TODO presnejsie popisat, co su jednotlive nastroje, popisy dat do \textbackslash{}note\{\}
+
 \section*{Základní nástroje}
-\begin{enumerate}
+\begin{itemize}
 \item Otázky -- jasné, intonačně neutrální
 \item Samostatná práce -- odhad trvání
 \item Domácí úkoly -- předávání a hodnocení
-\end{enumerate}
+\end{itemize}
 
 \section*{Alternativní nástroje dotazování se}
-\begin{enumerate}
+\begin{itemize}
 \item Hlasování -- kdo si myslí, že \textit{výrok}, ať \textit{akce}
 \item Kahoot
-\end{enumerate}
+\end{itemize}
 
 \section*{Alternativní nástroje samostatné práce}
-\begin{enumerate}
+\begin{itemize}
 \item Think-Pair-Share -- sami, poté v páru
 \item Anti-problém -- řešení opaku problému
 \item Myšlenkový oblak -- co vás napadne, když sa řekne \textit{slovo}
 \item Rozcvička -- krátké opakování
 \item Skládání kartiček -- z částí sestavit celek
 \item Hry -- zábavné aktivity na danou látku
-\end{enumerate}
+\end{itemize}
 
 \section*{Alternativní nástroje domácích úkolů}
-\begin{enumerate}
+\begin{itemize}
 \item Bonusy za splnění něčeho navíc
 \item Kontrolování úkolů studenty navzájem
 \item Společná revize vybraného domácího úkolu -- proč je řešení dobré / špatné
-\end{enumerate}
+\end{itemize}
 
 \section*{Základní nástroje vysvětlování}
-\begin{enumerate}
+\begin{itemize}
 \item Časový plán -- kolik má která část trvat
 \item Zapojení studentů do výkladu
 \item Získávání zpětné vazby -- ujištění se, že studenti pochopili správně to, co se řeklo
 \item Praktická ukázka -- aby se museli i dívat, nejen poslouchat
 \item Slajdy (případně checkboxy na tabuli)\\ -- vizualizace aktuálního pokroku hodiny
 \item Vtip -- odlehčení atmosféry
-\end{enumerate}
+\end{itemize}
 
 \chapter*{Prostor pro poznámky}
 \note{Například nejdůležitejší feedback z hospitací.}
