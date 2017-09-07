@@ -15,16 +15,13 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}		% Custom colors
 \usepackage{tikzsymbols}			% Smileys
 \usepackage{chronology}				% Timeline
+\usepackage{tikz}                   % Number lines
 %\usepackage{fontawesome}			% Special symbols
 
-% ======= TODO ======= 
-
-% Ondras: Napisat uvod k rubrike
-% Nedavat vlastnu otazku do vacsiny tyzdnov. Doplnit vzdy strukturovanu otazku (pripadne sede namety na protilahlu stranu) zhruba podla toho, v akom poradi mame naplanovane cvika.
-% posunut margin notes "pred/po cviceni", aby boli rovnako daleko od deliacej ciary
-% naformatovat "uzitecne nastroje"
-
 % ======= CUSTOM DOCUMENT SETTINGS ========
+
+% Specify relevant Tikz libraries
+\usetikzlibrary{arrows}
 
 % Change \chapter and \section command display and spacings
 % Source: https://tex.stackexchange.com/questions/63390/how-to-decrease-spacing-before-chapter-title
@@ -75,7 +72,7 @@
 \bfseries \color{gray} \large
 #3\end{turn}}}}
 
-% Casova os pre rozvrhnutie planu cvika 
+% Casova os pre rozvrhnutie planu cvika
 \newcommand{\timeline}{
 \vspace*{1.1cm}
 \color{gray}
@@ -138,19 +135,51 @@ Vlastní otázka:
 % Stranka rubriky
 \newcommand{\rubricpage}[8]{
 \newpage
-\begin{tabular}{@{}C{0.48\textwidth}C{0.48\textwidth}@{}l@{}}
-\normalsize \bfseries #1 & \normalsize \bfseries #5 & \\[1em] \hline \\[-1.2em]
-	\justify \note{Not aware:} #2 & \justify \note{Not aware:} #6 & \\[2em]
-$\bullet$ & $\bullet$ & \\
-$\bullet$ & $\bullet$ & \\
-\justify \note{Novice skill:} #3 & \justify \note{Novice skill:} #7 & \\[3em]
-$\bullet$ & $\bullet$ & \\
-$\bullet$ & $\bullet$ & \\
-$\bullet$ & $\bullet$ & \\
-$\bullet$ & $\bullet$ & \\
-$\bullet$ & $\bullet$ & \\
-\justify \note{Mastery:} #4 & \justify \note{Mastery:} #8 &
-\end{tabular}
+\stepcounter{rubricquestion}
+\section*{\therubricquestion: #1}
+
+\note{Neznalý:} #2
+
+\note{Zasvěcený:} #3
+
+\note{Guru:} #4
+
+\bigskip
+\begin{tikzpicture}
+\draw (0,0) -- (8,0);
+\foreach \i in {0,1,...,8} % numbers on line
+{
+\fill[black] (\i,0) circle (1.5 mm);
+\fill[white] (\i,0) circle (1.4 mm);
+}
+\node at (0.15, -0.5) {neznalý};
+\node at (4, -0.5)    {zasvěcený};
+\node at (8, -0.5)    {guru};
+\end{tikzpicture}
+
+\rule{\textwidth}{0.4pt}
+
+\stepcounter{rubricquestion}
+\section*{\therubricquestion: #5}
+
+\note{Neznalý:} #6
+
+\note{Zasvěcený:} #7
+
+\note{Guru:} #8
+
+\bigskip
+\begin{tikzpicture}
+\draw (0,0) -- (8,0);
+\foreach \i in {0,1,...,8} % numbers on line
+{
+\fill[black] (\i,0) circle (1.5 mm);
+\fill[white] (\i,0) circle (1.4 mm);
+}
+\node at (0.15, -0.5) {neznalý};
+\node at (4, -0.5)    {zasvěcený};
+\node at (8, -0.5)    {guru};
+\end{tikzpicture}
 }
 
 % ======= TITLE PAGE =======
@@ -192,7 +221,7 @@ Ukazuje se, že jsou nutné a nejspíš i dostačující tři věci\punct{.}\foo
 \begin{enumerate}
 \item \textbf{Pravidelně učit.} \\Potřebuješ mít vlastní zkušenost, nejlépe často a pravidelně opakovanou.
 \item \textbf{Reflektovat svoje učení.} \\Všímej si a přemýšlej nad tím, co fungovalo dobře a co příště zkusíš jinak.
-\item \textbf{Pozorovat, jak učí ostatní.} \\Přemýšlej o tom, jak to dělají, co jim funguje, co ne a co z toho můžeš použít. 
+\item \textbf{Pozorovat, jak učí ostatní.} \\Přemýšlej o tom, jak to dělají, co jim funguje, co ne a co z toho můžeš použít.
 \end{enumerate}
 
 Tento deníček ti pomůže reflektovat způsob, jakým učíš. Také v~něm nalezneš informace o tom, čeho je užitečné si všímat, jaké otázky si klást a nad čím přemýšlet. Není to však učebnice dobrého učitele -- je to pouze průvodce na cestě, po které už jdeš.
@@ -202,13 +231,13 @@ Vhodným doplňkem k vlastní reflexi výuky jsou diskuse s ostatními učiteli 
 \newpage
 \section*{Jak reflektivní deníček používat?}
 
-Nejlépe pravidelně. 
+Nejlépe pravidelně.
 
 Při přípravě i po každé své odvedené výuce si zapiš svoje myšlenky. Na třináct týdnů v semestru máš nachystaných třináct dvoustránek a na každé pár nabídnutých otázek. Deníček je malý mimo jiné i proto, aby ti psaní nezabralo moc času.
 
 Za stránkami pro jednotlivé týdny najdeš ještě rubriku učitelských schopností, seznam indikátorů, které je možné na hodině sledovat, připomenutí některých užitečných nástrojů k výuce a na závěr prostor na své vlastní poznámky.
 
-Někde záměrně používáme anglické termíny (jako například self-assesment), protože vhodný český překlad buď neexistuje, nebo má konotace, které nechceme. 
+Někde záměrně používáme anglické termíny (jako například self-assesment), protože vhodný český překlad buď neexistuje, nebo má konotace, které nechceme.
 
 \section*{Jaké jsou cíle používání deníku?}
 
@@ -473,7 +502,7 @@ Jak poznám, že se cíle podařilo dosáhnout?
 
 \selfassessment
 
-Blíží se konec semestru. Dostávají studenti to, co potřebují? (pro praxi/ke zkoušce) Jestli ne, jaké korekce můžeš v následujících týdnech provést?  
+Blíží se konec semestru. Dostávají studenti to, co potřebují? (pro praxi/ke zkoušce) Jestli ne, jaké korekce můžeš v následujících týdnech provést?
 
 \newpage
 \marginsection{-90}{1}{volné poznámky}
@@ -552,11 +581,13 @@ Pokud mají studenti zájem se dál samostatně rozvíjet v dané oblasti, jsou 
 Rubrika je nástroj, pro self-assesment. %opravdu chci pou69t self-assesment a ne sebehodnocení, protože slovo sebehodnocení má silnou konotaci k dobře-špatně a neznám české slovo, které by mělo pouze neutrální sebe-popisný význam.
 Pomáhá zřetelně si uvědomit a pojmenovat co umím, jaké aspekty to má a jaká je úroveň mých dovedností v různých aspektech. (viz knížka \note{How learning works})
 
-Škálu \note{Novice skill -- Mastery} jsme záměrně rozšířili o dimenzi \note{not aware}. Běžně si učitelé-začátečníci (a někdy ani učitelé-veteráni) neuvědomují možné úrovně a dimenze učitelské magie, prostě proto, že se s nimi nikdy nepotkali. Je možné, že po pár měsících či letech učení přijde moment, kdy si uvědomíte, že máte mnohem větší prostor pro zlepšování, než jste si prve mysleli.     
+Škálu \note{Novice skill -- Mastery} jsme záměrně rozšířili o dimenzi \note{not aware}. Běžně si učitelé-začátečníci (a někdy ani učitelé-veteráni) neuvědomují možné úrovně a dimenze učitelské magie, prostě proto, že se s nimi nikdy nepotkali. Je možné, že po pár měsících či letech učení přijde moment, kdy si uvědomíte, že máte mnohem větší prostor pro zlepšování, než jste si prve mysleli.
 
 Použití: Na začátku semestru si rubriku vyplň (zakroužkuj, kde na dané škále jsou podle tebe tvoje schopnosti). Vyber si 1-3 oblasti, na které se chceš zaměřit v tomto semestru a chceš-li být hodně důsledný, můžeš vymyslet i konkrétní kroky které uděláš a indikátory tvéo postupu. Na konci semestru si můžeš rubriku vyplnit znovu a zhodnotit v čem jsi se posunul(a).
 
-Rubriku můžete čist i jako manifest -- popisy mastery vystihují naši představu o tom, co zvládají skvělí učitelé a co bychom rádi mezi cvičícími na FI kultivovali. 
+Rubriku můžete čist i jako manifest -- popisy mastery vystihují naši představu o tom, co zvládají skvělí učitelé a co bychom rádi mezi cvičícími na FI kultivovali.
+
+\newcounter{rubricquestion}
 
 \newpage
 \rubricpage{Vědomá pozornost a rozhodování, \textit{tracking}}
