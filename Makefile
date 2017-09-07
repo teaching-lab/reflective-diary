@@ -6,12 +6,13 @@ all: denik print clean
 
 denik: denik.pdf
 
-print: denik.pdf print.pdf
+print: print.pdf denik
 
 clean:
 	rm -f *.aux *.dvi *.log *.synctex.gz *.out *.nav *.toc *.snm *.run.xml *-blx.bib *.bbl *.blg *.bcf
 
 %.pdf : %.tex $(IMAGES)
+	pdflatex $<
 	pdflatex $<
 
 remake:
