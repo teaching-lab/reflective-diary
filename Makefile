@@ -6,7 +6,7 @@ all: denik print clean
 
 denik: denik.pdf
 
-print: print.pdf denik
+print: print-single.pdf print-double.pdf denik
 
 clean:
 	rm -f *.aux *.dvi *.log *.synctex.gz *.out *.nav *.toc *.snm *.run.xml *-blx.bib *.bbl *.blg *.bcf
