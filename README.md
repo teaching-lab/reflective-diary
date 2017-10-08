@@ -23,6 +23,10 @@ Chtěli bychom, aby ti práce s deníkem:
 * Pomáhala uvědomit si, co všechno patří k tvojí roli učitele.
 * Umožňovala sledovat svůj vlastní pokrok.
 
+## Sazba deníku
+
+Deník je vysázen v systému LaTeX. Překlad do formátu PDF na linuxových systémech ulehčuje přiložený Makefile. Vysázená verze je taky dostupná jako PDF na GitHubu (viz záložka '*releases*').
+
 ## Máš nápady na zlepšení?
 
 Budeme rádi za jakékoliv nápady, zkušenosti či poznámky k deníku. Ozvi se prosím emailem Martinovi na [*mukrop@mail.muni.cz*](mailto:mukrop@mail.muni.cz).
