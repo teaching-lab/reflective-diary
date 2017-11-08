@@ -25,7 +25,7 @@ Chtěli bychom, aby ti práce s deníkem:
 
 ## Sazba deníku
 
-Deník je vysázen v systému LaTeX. Překlad do formátu PDF na linuxových systémech ulehčuje přiložený Makefile. Vysázená verze je taky dostupná jako PDF na GitHubu (viz záložka '*releases*').
+Deník je vysázen v systému LaTeX. Překlad do formátu PDF na linuxových systémech ulehčuje přiložený Makefile. Vysázená verze je taky dostupná jako PDF na GitHubu (viz [záložka '*releases*'](https://github.com/mukrop/reflektivni-denik-ucitele/releases)). K dispozici je verze pro čtení a dvě verze pro tisk.
 
 ## Máš nápady na zlepšení?
 
