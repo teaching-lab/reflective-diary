@@ -5,6 +5,11 @@ Tento deníček ti pomůže reflektovat způsob, jakým učíš. Také v něm na
 
 Vhodným doplňkem k vlastní reflexi výuky jsou diskuze s ostatními učiteli o tom, jak učí. Pokud se chceš setkávat s dalšími cvičícími pravidelně a navíc se dozvědět více o tom, co funguje a co ne, zapiš si předmět [*DUCIT Praktikum vedení cvičení*](https://is.muni.cz/predmet/fi/DUCIT) na [Fakultě informatiky MU](https://fi.muni.cz).
 
+## Deník na stažení
+
+Vysázená verze je dostupná jako PDF na GitHubu (viz [záložka '*releases*'](https://github.com/mukrop/reflektivni-denik-ucitele/releases)). K dispozici je verze pro čtení a dvě verze pro tisk.
+Deník je vysázen v systému LaTeX. Překlad do formátu PDF na linuxových systémech ulehčuje přiložený Makefile.
+
 ## Jak reflektivní deníček používat?
 
 Nejlépe pravidelně.
@@ -22,10 +27,6 @@ Chtěli bychom, aby ti práce s deníkem:
 * Dávala prostor pro snadné psaní si poznámek pro příště.
 * Pomáhala uvědomit si, co všechno patří k tvojí roli učitele.
 * Umožňovala sledovat svůj vlastní pokrok.
-
-## Sazba deníku
-
-Deník je vysázen v systému LaTeX. Překlad do formátu PDF na linuxových systémech ulehčuje přiložený Makefile. Vysázená verze je taky dostupná jako PDF na GitHubu (viz [záložka '*releases*'](https://github.com/mukrop/reflektivni-denik-ucitele/releases)). K dispozici je verze pro čtení a dvě verze pro tisk.
 
 ## Máš nápady na zlepšení?
 
