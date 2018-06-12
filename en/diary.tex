@@ -1,0 +1,126 @@
+\documentclass[twoside,openany]{book}
+\usepackage[czech]{babel}			% Language
+\usepackage[utf8]{inputenc}			% Encoding of characters in this .tex file
+\usepackage{cmap}					% Make PDF file searchable and copyable (ASCII characters)
+\usepackage{lmodern}				% Make PDF file searchable and copyable (Accented characters)
+\usepackage[T1]{fontenc}			% Hyphenate accented words
+\usepackage[a6paper, top=0.75cm, bottom=1.5cm, inner=0.75cm, outer=0.75cm]{geometry}		% Paper size and margins
+\usepackage[fontsize=9]{scrextend}  % Font size
+\usepackage{marginnote}				% Enable margin notes
+\usepackage{rotating}				% Rotated environments (for margin headers)
+\usepackage[protrusion]{microtype}	% Better typeset results
+\usepackage{enumitem}				% Nicer enumeration lists
+\usepackage{ragged2e}				% Add \justify command
+\usepackage{titlesec}				% Customize chapters
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}		% Custom colors
+\usepackage{tikzsymbols}			% Smileys
+\usepackage{chronology}				% Timeline
+\usepackage{tikz}                   % Number lines
+%\usepackage{fontawesome}			% Special symbols
+\usepackage{url}
+
+% ======= CUSTOM DOCUMENT SETTINGS ========
+
+% Specify relevant Tikz libraries
+\usetikzlibrary{arrows}
+
+% Change \chapter and \section command display and spacings
+% Source: https://tex.stackexchange.com/questions/63390/how-to-decrease-spacing-before-chapter-title
+\titleformat{\chapter}[display]{\normalfont\Large\bfseries}{Týden \thechapter}{0em}{\Large}
+\titlespacing*{\chapter}{0em}{-2em}{0em}
+\titleformat{\section}[display]{\normalfont\bfseries}{\sectionname}{}{}
+\titlespacing*{\section}{0em}{0.5em}{0em}
+
+% \punct command allows to shift the footnotemark above a punctuation
+\newlength{\spc} % declare a variable to save spacing value
+\newcommand{\punct}[1]{%
+  \settowidth{\spc}{#1}% set value of \spc variable to the width of #1 argument
+  \addtolength{\spc}{-1.8\spc}% subtract from \spc about two (1.8) of its values making its magnitude negative
+  #1% print the optional argument
+  \hspace*{\spc}% print an additional negative spacing stored in \spc after #1
+}
+
+% Remove headers and position page number in the bottom mid
+\pagestyle{plain}
+
+% Smaller spaces between enumeration lists
+\setitemize{itemsep=0em}
+
+% Disable automatic indentation, enable paragraph skip
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+
+% Rule length including the margin
+\newlength{\rulelength}
+\setlength{\rulelength}{\dimexpr(\textwidth+0.5cm)\relax}
+
+% Smaller note (italics, gray)
+\newcommand{\note}[1]{\textcolor{gray}{\small\itshape #1}}
+
+% ======= METADATA =======
+
+\title{Reflektivní deník učitele}
+\author{Kolektiv vyučujících Praktika vedení cvičení}
+\date{\today}
+
+% ======= DOCUMENT START =======
+
+\begin{document}
+
+\begin{titlepage}
+	\vspace*{0.14\paperheight}
+	\centering
+	\includegraphics[width=0.7\paperwidth]{../img/lightbulb}
+	\newpage
+\end{titlepage}
+\begin{titlepage}
+	\centering
+	\vspace*{1cm}
+	\includegraphics[width=0.5\textwidth]{../img/diary}\par
+	\vspace{0.5cm}
+	{\huge\bfseries Reflektivní\\ deník učitele\par}
+	\vfill
+	\raggedright
+	\Large
+	Majitel:\par
+	\vspace{0.2cm}
+	Předmět:\par
+\end{titlepage}
+
+% ===== DIARY CONTENTS =====
+
+\include{intro}
+\include{weeks}
+\include{rubric}
+\include{outro}
+
+% ===== IMPRINT =====
+
+\newpage
+\vspace*{\fill}
+Reflektivní deník učitele
+
+Verze: \today
+
+\textit{Budeme rádi, když nám dáš vědět svoje postřehy z používaní deníku a další náměty emailem Martinovi na mukrop@mail.muni.cz.}
+
+Deník vytvořili Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský a Martin Macák pro kurz \textit{DUCIT Praktikum vedení cvičení} na Fakultě informatiky MU.
+
+Zdrojové soubory i PDF k tisku jsou dostupné online na adrese \url{github.com/mukrop/reflektivni-denik-ucitele}.
+
+\begin{minipage}{0.32\textwidth}
+\includegraphics[width=0.95\textwidth]{../img/cc-by-nc-sa}
+\end{minipage}
+\begin{minipage}{0.68\textwidth}
+Toto dílo podléhá licenci Creative Commons Uveďte původ-Neužívejte dílo komerčně-Zachovejte licenci 4.0 Mezinárodní licence.
+\end{minipage}
+
+% ===== BACK COVER PAGE =====
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\end{document}

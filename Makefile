@@ -2,21 +2,20 @@ TEXS=$(wildcard *.tex)
 PDFS=$(TEXS:.tex=.pdf)
 IMAGES=$(wildcard img/*)
 
-all: denik print clean
+all: czech english
 
-denik: denik.pdf
+czech: 
+	cd cs && make
 
-print: print-single.pdf print-double.pdf denik
+english: 
+	cd en && make
 
 clean:
-	rm -f *.aux *.dvi *.log *.synctex.gz *.out *.nav *.toc *.snm *.run.xml *-blx.bib *.bbl *.blg *.bcf
-
-%.pdf : %.tex $(IMAGES)
-	pdflatex $<
-	pdflatex $<
+	cd cs && make clean
+	cd en && make clean
 
 remake:
-	rm $(PDFS)
-	make all
+	cd cs && make remake
+	cd en && make remake
 
-.PHONY: all denik print clean remake
+.PHONY: all czech english clean remake
