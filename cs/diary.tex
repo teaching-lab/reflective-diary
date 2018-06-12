@@ -10,7 +10,8 @@
 \usepackage{rotating}              % Rotated environments (for margin headers)
 \usepackage[protrusion]{microtype} % Better typeset results
 \usepackage{enumitem}              % Nicer enumeration lists
-\usepackage{csquotes}              % Add command to enquote strings
+% Hack follows: my version of csquotes does not know Czech (but Danish style is the same)
+\usepackage[style=danish]{csquotes} % Add command to enquote strings
 \usepackage{ragged2e}              % Add \justify command
 \usepackage{titlesec}              % Customize chapters
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} % Custom colors
@@ -103,7 +104,7 @@ Reflektivní deník učitele
 Verze: \today
 
 \bigskip
-Budeme rádi, když nám dáš vědět svoje postřehy z používaní deníku emailem Martinovi na \textit{mukrop@mail.muni.cz.}
+Budeme velice rádi, když nám dáš vědět svoje náveky na zlepšení nebo postřehy z používaní deníku. Napiš email Martinovi na \textit{mukrop@mail.muni.cz}.
 
 Zdrojové soubory i PDF k tisku jsou dostupné online na adrese \url{github.com/mukrop/reflektivni-denik-ucitele}.
 
