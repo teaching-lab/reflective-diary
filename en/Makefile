@@ -3,21 +3,21 @@ IMAGES=$(wildcard ../img/*)
 PRINTS=$(wildcard ../print/*.tex)
 PDFS=$(wildcard *.pdf)
 
-all: diary.pdf print clean
+all: diary.pdf print-single.pdf print-double.pdf clean
 
-diary.pdf : $(TEXS) $(IMAGES)
-	pdflatex diary.tex
-	pdflatex diary.tex
+%.pdf : %.tex $(TEXS) $(IMAGES)
+	pdflatex $<
+	pdflatex $<
 
-print: $(PRINTS) $(TEXS) $(IMAGES)
-	pdflatex ../print/print-single.tex
-	pdflatex ../print/print-double.tex
+%.pdf : ../print/%.tex $(TEXS) $(IMAGES)
+	pdflatex $<
+	pdflatex $<
 
 clean:
 	rm -f *.aux *.dvi *.log *.synctex.gz *.out *.nav *.toc *.snm *.run.xml *-blx.bib *.bbl *.blg *.bcf
 
 remake:
-	rm $(PDF)
+	rm -f $(PDF)
 	make all
 
 .PHONY: all print clean remake

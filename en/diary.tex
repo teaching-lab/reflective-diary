@@ -1,23 +1,23 @@
 \documentclass[twoside,openany]{book}
-\usepackage[czech]{babel}			% Language
-\usepackage[utf8]{inputenc}			% Encoding of characters in this .tex file
-\usepackage{cmap}					% Make PDF file searchable and copyable (ASCII characters)
-\usepackage{lmodern}				% Make PDF file searchable and copyable (Accented characters)
-\usepackage[T1]{fontenc}			% Hyphenate accented words
-\usepackage[a6paper, top=0.75cm, bottom=1.5cm, inner=0.75cm, outer=0.75cm]{geometry}		% Paper size and margins
-\usepackage[fontsize=9]{scrextend}  % Font size
-\usepackage{marginnote}				% Enable margin notes
-\usepackage{rotating}				% Rotated environments (for margin headers)
-\usepackage[protrusion]{microtype}	% Better typeset results
-\usepackage{enumitem}				% Nicer enumeration lists
-\usepackage{ragged2e}				% Add \justify command
-\usepackage{titlesec}				% Customize chapters
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}		% Custom colors
-\usepackage{tikzsymbols}			% Smileys
-\usepackage{chronology}				% Timeline
-\usepackage{tikz}                   % Number lines
-%\usepackage{fontawesome}			% Special symbols
-\usepackage{url}
+\usepackage[english]{babel}        % Language
+\usepackage[utf8]{inputenc}        % Encoding of characters in this .tex file
+\usepackage{cmap}                  % Make PDF file searchable and copyable (ASCII characters)
+\usepackage{lmodern}               % Make PDF file searchable and copyable (Accented characters)
+\usepackage[T1]{fontenc}           % Hyphenate accented words
+\usepackage[a6paper, top=0.75cm, bottom=1.5cm, inner=0.75cm, outer=0.75cm]{geometry}  % Paper size and margins
+\usepackage[fontsize=9]{scrextend} % Font size
+\usepackage{marginnote}            % Enable margin notes
+\usepackage{rotating}              % Rotated environments (for margin headers)
+\usepackage[protrusion]{microtype} % Better typeset results
+\usepackage{enumitem}              % Nicer enumeration lists
+\usepackage{csquotes}              % Add command to enquote strings
+\usepackage{ragged2e}              % Add \justify command
+\usepackage{titlesec}              % Customize chapters
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor} % Custom colors
+\usepackage{tikzsymbols}           % Smileys
+\usepackage{chronology}            % Timeline
+\usepackage{tikz}                  % Number lines
+\usepackage{url}                   % Enable URL typesetting
 
 % ======= CUSTOM DOCUMENT SETTINGS ========
 
@@ -59,8 +59,8 @@
 
 % ======= METADATA =======
 
-\title{Reflektivní deník učitele}
-\author{Kolektiv vyučujících Praktika vedení cvičení}
+\title{Teacher's Reflective Diary}
+\author{Teachers of Teaching Lab at Masaryk University}
 \date{\today}
 
 % ======= DOCUMENT START =======
@@ -78,13 +78,13 @@
 	\vspace*{1cm}
 	\includegraphics[width=0.5\textwidth]{../img/diary}\par
 	\vspace{0.5cm}
-	{\huge\bfseries Reflektivní\\ deník učitele\par}
+	{\huge\bfseries Teacher's\\ Reflective Diary\par}
 	\vfill
 	\raggedright
 	\Large
-	Majitel:\par
+	Owner:\par
 	\vspace{0.2cm}
-	Předmět:\par
+	Course:\par
 \end{titlepage}
 
 % ===== DIARY CONTENTS =====
@@ -98,21 +98,28 @@
 
 \newpage
 \vspace*{\fill}
-Reflektivní deník učitele
+Teacher's Reflective Diary
 
-Verze: \today
+Version: \today
 
-\textit{Budeme rádi, když nám dáš vědět svoje postřehy z používaní deníku a další náměty emailem Martinovi na mukrop@mail.muni.cz.}
+\bigskip
+We appreciate suggestions for diary improvement or any related comments. Please email Martin at \textit{mukrop@mail.muni.cz.}
 
-Deník vytvořili Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský a Martin Macák pro kurz \textit{DUCIT Praktikum vedení cvičení} na Fakultě informatiky MU.
+Both source files and printable PDFs are available online at \url{github.com/mukrop/reflektivni-denik-ucitele}.
 
-Zdrojové soubory i PDF k tisku jsou dostupné online na adrese \url{github.com/mukrop/reflektivni-denik-ucitele}.
+\bigskip
+\begin{minipage}{0.68\textwidth}
+This diary was authored by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course \textit{Teaching Lab} at the Faculty of Informatics, Masaryk University.
+\end{minipage}
+\begin{minipage}[t]{0.32\textwidth}
+\hfill\includegraphics[width=0.90\textwidth]{../img/muni}
+\end{minipage}
 
 \begin{minipage}{0.32\textwidth}
 \includegraphics[width=0.95\textwidth]{../img/cc-by-nc-sa}
 \end{minipage}
 \begin{minipage}{0.68\textwidth}
-Toto dílo podléhá licenci Creative Commons Uveďte původ-Neužívejte dílo komerčně-Zachovejte licenci 4.0 Mezinárodní licence.
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 \end{minipage}
 
 % ===== BACK COVER PAGE =====
