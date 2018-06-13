@@ -33,7 +33,7 @@ We highly appreciate suggestions for improvement, notes on your experience or an
 
 ## Authors
 
-![Masaryk University](https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.png "Masaryk University"){:style="float: right;"}
+<img align="right" width="280" height="80" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.png" alt="Masaryk University" title="Masaryk University">
 
 This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course [*Teaching Lab*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics, Masaryk University](https://fi.muni.cz).
 
