@@ -1,43 +1,44 @@
-Reflektivní deník učitele
-=========================
+Teacher's Reflective Diary
+==========================
 
-Tento deníček ti pomůže reflektovat způsob, jakým učíš. Také v něm nalezneš informace o tom, čeho je užitečné si všímat, jaké otázky si klást a nad čím přemýšlet. Není to však učebnice dobrého učitele -- je to pouze průvodce na cestě, po které už jdeš.
+This diary will help you reflect your own teaching. It suggests things to pay attention to, questions to ask and aspects to ponder. But bear in mind -- it's not a cookbook for good teaching, it is only a guidebook for your own journey.
 
-Vhodným doplňkem k vlastní reflexi výuky jsou diskuze s ostatními učiteli o tom, jak učí. Pokud se chceš setkávat s dalšími cvičícími pravidelně a navíc se dozvědět více o tom, co funguje a co ne, zapiš si předmět [*DUCIT Praktikum vedení cvičení*](https://is.muni.cz/predmet/fi/DUCIT) na [Fakultě informatiky MU](https://fi.muni.cz).
+To supplement your own teaching reflection, join the conversation with your fellow teachers. Ask around at your institution for a teaching and learning centre or directly engage your colleagues teaching the same course.
 
-## Deník na stažení
+If you are from Masaryk University (Czech Republic), you can enroll the [*Teaching Lab course*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics MUNI](https://fi.muni.cz) to learn more and join the descission on better teaching.
 
-Vysázená verze je dostupná jako PDF na GitHubu (viz [záložka '*releases*'](https://github.com/mukrop/reflektivni-denik-ucitele/releases)). K dispozici je verze pro čtení a dvě verze pro tisk.
-Deník je vysázen v systému LaTeX. Překlad do formátu PDF na linuxových systémech ulehčuje přiložený Makefile.
+## Diary for download
 
-## Jak reflektivní deníček používat?
+The compiled version is available at GitHub (see the ['*releases*' tab](https://github.com/mukrop/teachers-reflective-diary/releases)). There are two language versions (Czech and English), each in a reading variant and two print variants. The diary is typeset in LaTeX. The included *Makefile* facilitates the compilation process on linux-based systems.
 
-Nejlépe pravidelně.
+## How to use the reflective diary?
 
-Při přípravě i po každé své odvedené výuce si zapiš svoje myšlenky. Na třináct týdnů v semestru máš nachystaných třináct dvoustránek, a na každé pár nabídnutých otázek. Deníček je malý mimo jiné i proto, aby ti psaní nezabralo moc času.
+First and foremost, use it regularly.
 
-Za stránkami pro jednotlivé týdny najdeš ještě rubriku učitelských schopností, seznam indikátorů, které je možné na hodině sledovat, připomenutí některých užitečných nástrojů k výuce a na závěr prostor na své vlastní poznámky.
+Note down your thoughts both when planning the lecture and after delivering it. There are thirteen spreads (one for each semester week), each suggesting a handful of questions. The diary is quite small -- it's partly to keep your notes short.
 
-Někde záměrně používáme anglické termíny (jako například *self-assessment*), protože vhodný český překlad buď neexistuje, nebo má konotace, které nechceme.
+After the spreads for individual weeks, there is a rubric for teacher skills, a list of indicators that can be evaluated, a list of some useful teaching tools and some extra space for your own notes and remarks.
 
-## Jaké jsou cíle používání deníku?
+## Why to use the reflective diary?
 
-Chtěli bychom, aby ti práce s deníkem:
-* Připomínala zamyslet se nad svou hodinou (reflexe).
-* Dávala prostor pro snadné psaní si poznámek pro příště.
-* Pomáhala uvědomit si, co všechno patří k tvojí roli učitele.
-* Umožňovala sledovat svůj vlastní pokrok.
+Regularly using the reflective diary serves mutiple purposes:
+* It reminds you to reflect your teaching.
+* It provides you with a convenient place to collect notes for the future.
+* It helps you see all the different aspects of teaching.
+* It enables you to track your progress.
 
-## Máš nápady na zlepšení?
+## Having any comments or suggestions?
 
-Budeme rádi za jakékoliv nápady, zkušenosti či poznámky k deníku. Ozvi se prosím emailem Martinovi na [*mukrop@mail.muni.cz*](mailto:mukrop@mail.muni.cz).
+We highly appreciate suggestions for improvement, notes on your experience or any other comments. Please email Martin at *mukrop@mail.muni.cz*.
 
-## Autoři
+## Authors
 
-Deník vytvořili Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský a Martin Macák pro kurz [*DUCIT Praktikum vedení cvičení*](https://is.muni.cz/predmet/fi/DUCIT) na [Fakultě informatiky MU](https://fi.muni.cz).
+![Masaryk University](https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.png "Masaryk University"){:style="float: right;"}
+
+This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course [*Teaching Lab*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics, Masaryk University](https://fi.muni.cz).
 
 ## Licence
 
-![Licence Creative Commons BY NC SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png "Licence Creative Commons BY NC SA 4.0")
+![Licence Creative Commons BY NC SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png "Licence Creative Commons BY NC SA 4.0"){:style="float: right;"}
 
-Toto dílo podléhá licenci [Creative Commons Uveďte původ-Neužívejte dílo komerčně-Zachovejte licenci 4.0 Mezinárodní licence](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
