@@ -29,7 +29,8 @@ Regularly using the reflective diary serves mutiple purposes:
 
 ## Having any comments or suggestions?
 
-We highly appreciate suggestions for improvement, notes on your experience or any other comments. Please email Martin at *mukrop@mail.muni.cz*.
+We highly appreciate suggestions for improvement, notes on your experience or any other comments.  
+Please email Martin at *mukrop@mail.muni.cz*.
 
 ## Authors
 
