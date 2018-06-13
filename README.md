@@ -33,12 +33,12 @@ We highly appreciate suggestions for improvement, notes on your experience or an
 
 ## Authors
 
-<img align="right" width="280" height="80" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.png" alt="Masaryk University" title="Masaryk University">
+<img align="right" width="210" height="60" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.png" alt="Masaryk University" title="Masaryk University">
 
 This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course [*Teaching Lab*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics, Masaryk University](https://fi.muni.cz).
 
 ## Licence
 
-![Licence Creative Commons BY NC SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png "Licence Creative Commons BY NC SA 4.0"){:style="float: right;"}
+<img align="right" width="176" height="62" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence BY NC SA 4.0" title="Creative Commons Licence BY NC SA 4.0">
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
