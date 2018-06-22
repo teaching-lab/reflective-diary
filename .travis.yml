@@ -1,0 +1,21 @@
+# TeX 2017 installation by https://github.com/holgern/travis-texlive
+before_install:
+  - curl -L https://github.com/holgern/travis-texlive/releases/download/2017-07-05_09/texlive.tar.xz | tar -JxC ~
+install:
+  - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
+
+# Build the diary (1 minute timeout)
+script:
+  - travis_wait 1 make all
+
+# Deploy compiled PDFs to GitHub releases
+deploy:
+  provider: releases
+  api_key:
+    secure: zFxzIYBLY9BbVEd5wq/wfqYRFjSDvJkH9GmY4zsbPeFlIL9ICtQKy5BzjDPjfrQSKqFEz2ump6Eh13P7sX6MjZB6189HhYfKzEaCGnrw/+E7ejyrKigVWxMnc3rcR2mGG71T5f7lz/z69OnuzajHOFyBUWhvRh2/34n7an9gwk6pT2GDJn958ASjXeI+XtOEHi9i0OI2qM1OzNTRoVFd5cqUjjsJ9XJhBKIWbxEujmdyJSV9iPnyO5JM1B3Xu10cz8Pyt7pL/UUcwAOFZNkIpom1BhHwS4UGw2/Q3s445PdKRGW6FA+1DJYuv17qBw6t8gTeGQgIohrUN27YyC770D/X8tQKHWVpDvRpITKy87kmqOoyNtxe+VvMlp0vW7A45152lWx6SyMaakgtVfkeWuJaem7i+iszoXx7kPpWdAo0mOMArZaN769fvy34lNt9QR+wKKNcNAjy7Mwo0dGStpKUFgQh9sExEGGx1XYug8xFBD7UADKnPNx/DmEnRVOqzQLRzc9p7jADCtUdX2rho+adaWqaHjwXBc0zVMzrzYNO8xisc0Hbg73GgHDn3pxJ6HL3cvu//W910p3cl2c7t6ecYVZPifx4If6FLLsl0NSIjZPAF47lLQon2fZtxASG0n+djPqnjlNvvyhgbkA9EeLjHXCFbGphsmPbfamYO80=
+  file_glob: true
+  file: build/*
+  skip_cleanup: true
+  name: master
+  body: "Draft of the latest version. For deployment in class, using the latest stable release is recommended."
+  draft: true
