@@ -1,4 +1,6 @@
+# LaTeX temporary files
 *.aux
 *.log
-
+# Build documents
 *.pdf
+build/*

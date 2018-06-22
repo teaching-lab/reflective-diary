@@ -16,6 +16,5 @@ deploy:
   file_glob: true
   file: build/*
   skip_cleanup: true
-  name: master
-  body: "Draft of the latest version. For deployment in class, using the latest stable release is recommended."
-  draft: true
+  on:
+    tags: true
