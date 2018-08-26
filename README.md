@@ -7,7 +7,7 @@ To supplement your teaching reflection, join the conversation with your fellow t
 
 If you are from Masaryk University (Czech Republic), you can enroll the [*Teaching Lab course*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics MUNI](https://fi.muni.cz) to learn more and join the discussion on better teaching.
 
-## Diary for download
+## Diary for download <img align="right" width="90" height="20" src="https://travis-ci.com/teaching-lab/reflective-diary.svg?branch=master" alt="Travis CI build status" title="Travis CI build status">
 
 The compiled version is available at GitHub (see the ['*releases*' tab](https://github.com/mukrop/teachers-reflective-diary/releases)). There are two language versions (Czech and English), each in a reading variant and two print variants. The diary is typeset in LaTeX. The included *Makefile* facilitates the compilation process on Linux-based systems.
 
