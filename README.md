@@ -15,13 +15,13 @@ The compiled version is available at GitHub (see the ['*releases*' tab](https://
 
 First and foremost, use it regularly.
 
-Note down your thoughts both when planning the lecture and after delivering it. There are thirteen spreads (one for each semester week), each suggesting a handful of questions. The diary is quite small -- it's partly to keep your notes short.
+Note down your thoughts both when planning the lesson and after delivering it. There are thirteen spreads (one for each semester week), each suggesting a handful of questions. The diary is quite small -- it's partly to keep your notes short.
 
-After the spreads for individual weeks, there is a rubric for teaching skills, a list of indicators that can be evaluated, a list of some useful teaching tools and some extra space for your notes and remarks.
+After the spreads for individual weeks, there is a rubric for teaching skills, a list of indicators that can be evaluated, a list of some useful teaching tools, and some extra space for your notes and remarks.
 
 <img align="center" width="100%" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/diary-structure.png" alt="Structure of the reflective diary" title="Structure of the reflective diary">
 
-## Why to use the reflective diary?
+## Why use the reflective diary?
 
 Regularly using the reflective diary serves multiple purposes:
 * It reminds you to reflect your teaching.
@@ -29,7 +29,7 @@ Regularly using the reflective diary serves multiple purposes:
 * It helps you see all the different aspects of teaching.
 * It enables you to track your progress.
 
-## Having any comments or suggestions?
+## Have any comments or suggestions?
 
 We highly appreciate suggestions for improvement, notes on your experience or any other comments.  
 Please email Martin at *mukrop@mail.muni.cz*.
