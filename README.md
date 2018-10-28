@@ -5,7 +5,7 @@ This diary will help you reflect your own teaching. It suggests things to pay at
 
 To supplement your teaching reflection, join the conversation with your fellow teachers. Ask around at your institution for a teaching and learning center or directly engage your colleagues teaching the same course.
 
-If you are from Masaryk University (Czech Republic), you can enroll the [*Teaching Lab course*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics MUNI](https://fi.muni.cz) to learn more and join the discussion on better teaching.
+If you are from Masaryk University (Czech Republic), you can enroll in the [*Teaching Lab course*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics MUNI](https://fi.muni.cz) to learn more and join the discussion on better teaching.
 
 ## Diary for download <img align="right" width="90" height="20" src="https://travis-ci.com/teaching-lab/reflective-diary.svg?branch=master" alt="Travis CI build status" title="Travis CI build status">
 
@@ -17,7 +17,7 @@ First and foremost, use it regularly.
 
 Note down your thoughts both when planning the lesson and after delivering it. There are thirteen spreads (one for each semester week), each suggesting a handful of questions. The diary is quite small -- it's partly to keep your notes short.
 
-After the spreads for individual weeks, there is a rubric for teaching skills, a list of indicators that can be evaluated, a list of some useful teaching tools, and some extra space for your notes and remarks.
+After the spreads for individual weeks, there is a teacher evaluation rubric, a list of indicators that can be evaluated, a list of some useful teaching tools, and some extra space for your notes and remarks.
 
 <img align="center" width="100%" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/diary-structure.png" alt="Structure of the reflective diary" title="Structure of the reflective diary">
 
