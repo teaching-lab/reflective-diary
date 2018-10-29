@@ -3,6 +3,7 @@
 *.log
 *.fdb_latexmk
 *.fls
+*.synctex.gz
 # Build documents
 *.pdf
 build/*
