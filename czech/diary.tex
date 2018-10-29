@@ -57,6 +57,10 @@
 
 % Smaller note (italics, gray)
 \newcommand{\note}[1]{\textcolor{gray}{\small\itshape #1}}
+\newcommand{\noteblack}[1]{{\small\itshape #1}}
+
+% accurate absolute positioning
+\newcommand{\putat}[3]{\begin{picture}(0,0)(0,0)\put(#1,#2){#3}\end{picture}}
 
 % ======= METADATA =======
 
@@ -68,12 +72,10 @@
 
 \begin{document}
 
-\begin{titlepage}
-	\vspace*{0.14\paperheight}
-	\centering
-	\includegraphics[width=0.7\paperwidth]{../img/lightbulb}
-	\newpage
-\end{titlepage}
+% Front cover page
+\thispagestyle{empty}
+\putat{-21}{-390}{\includegraphics[width=\paperwidth]{../img/cover-front}}
+% Foretitle
 \begin{titlepage}
 	\centering
 	\vspace*{1cm}
@@ -104,23 +106,26 @@ Reflektivní deník učitele
 Verze: \today
 
 \bigskip
-Budeme velice rádi, když nám dáš vědět svoje náveky na zlepšení nebo postřehy z používaní deníku. Napiš email Martinovi na \textit{mukrop@mail.muni.cz}.
+Budeme velice rádi, když nám dáš vědět svoje náveky na zlepšení nebo postřehy z používaní deníku. Napiš nám email na \textit{teachinglab@fi.muni.cz}.
 
 Zdrojové soubory i PDF k tisku jsou dostupné online na adrese \url{github.com/teaching-lab/reflective-diary}.
 
-\bigskip
-\begin{minipage}{0.68\textwidth}
-Deník vytvořili Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský a Martin Macák pro kurz \textit{Teaching Lab} na Fakultě informatiky Masarykovy univerzity.
-\end{minipage}
-\begin{minipage}[t]{0.32\textwidth}
-\hfill\includegraphics[width=0.90\textwidth]{../img/muni}
+\medskip
+\begin{minipage}{0.28\textwidth}
+	\includegraphics[width=0.80\textwidth]{../img/muni}\hfill
+	\end{minipage}
+\begin{minipage}{0.72\textwidth}
+Deník vytvořili Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský a Martin Macák pro kurz \textit{Teaching Lab} na Fakultě informatiky Masarykovy univerzity v spolupráci s Centrem jazykového vzdělávání Masarykovy univerzity.
 \end{minipage}
 
-\begin{minipage}{0.32\textwidth}
-\includegraphics[width=0.95\textwidth]{../img/cc-by-nc-sa}
-\end{minipage}
-\begin{minipage}{0.68\textwidth}
+\medskip
+Naše zkušenosti z používání deníku jsou popsané v publikaci: M. Ukrop, V. Švábenský, J. Nehyba, \enquote{Reflective Diary for Professional Development of~Novice~Teachers}, in \textit{Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE)}, 2019.
+
+\begin{minipage}{0.72\textwidth}
 Toto dílo podléhá licenci Creative Commons Uveďte původ-Neužívejte dílo komerčně-Zachovejte licenci 4.0 Mezinárodní licence.
+\end{minipage}
+\begin{minipage}{0.28\textwidth}
+\hfill\includegraphics[width=0.90\textwidth]{../img/cc-by-nc-sa}
 \end{minipage}
 
 % ===== BACK COVER PAGE =====
@@ -129,6 +134,6 @@ Toto dílo podléhá licenci Creative Commons Uveďte původ-Neužívejte dílo 
 \mbox{}
 \newpage
 \thispagestyle{empty}
-\mbox{}
+\putat{-21}{-390}{\includegraphics[width=\paperwidth]{../img/cover-back-en}}
 
 \end{document}
