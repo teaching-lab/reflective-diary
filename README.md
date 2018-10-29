@@ -32,11 +32,11 @@ Regularly using the reflective diary serves multiple purposes:
 ## Have any comments or suggestions?
 
 We highly appreciate suggestions for improvement, notes on your experience or any other comments.  
-Please email Martin at *teachinglab@fi.muni.cz*.
+Please email us at *teachinglab@fi.muni.cz*.
 
 ## Authors
 
-<img align="right" width="210" height="60" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.png" alt="Masaryk University" title="Masaryk University">
+<img align="right" width="210" height="60" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.svg" alt="Masaryk University" title="Masaryk University">
 
 This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course [*Teaching Lab*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics, Masaryk University](https://fi.muni.cz).
 
