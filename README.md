@@ -1,7 +1,7 @@
 Teacher's Reflective Diary
 ==========================
 
-This diary will help you reflect your own teaching. It suggests things to pay attention to, questions to ask and aspects to ponder. But bear in mind -- it's not a cookbook for good teaching, it is only a guidebook for your own journey.
+This diary will help you reflect on your own teaching. It suggests things to pay attention to, questions to ask and aspects to ponder. But bear in mind -- it's not a cookbook for good teaching, it is only a guidebook for your own journey.
 
 To supplement your teaching reflection, join the conversation with your fellow teachers. Ask around at your institution for a teaching and learning center or directly engage your colleagues teaching the same course.
 
@@ -24,7 +24,7 @@ After the spreads for individual weeks, there is a teacher evaluation rubric, a 
 ## Why use the reflective diary?
 
 Regularly using the reflective diary serves multiple purposes:
-* It reminds you to reflect your teaching.
+* It reminds you to reflect on your teaching.
 * It provides you with a convenient place to collect notes for the future.
 * It helps you see all the different aspects of teaching.
 * It enables you to track your progress.
@@ -32,7 +32,7 @@ Regularly using the reflective diary serves multiple purposes:
 ## Have any comments or suggestions?
 
 We highly appreciate suggestions for improvement, notes on your experience or any other comments.  
-Please email Martin at *mukrop@mail.muni.cz*.
+Please email Martin at *teachinglab@fi.muni.cz*.
 
 ## Authors
 
