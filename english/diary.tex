@@ -72,12 +72,10 @@
 
 \begin{document}
 
-\begin{titlepage}
-	\vspace*{0.14\paperheight}
-	\centering
-	\includegraphics[width=0.7\paperwidth]{../img/lightbulb}
-	\newpage
-\end{titlepage}
+% Front cover page
+\thispagestyle{empty}
+\putat{-21}{-390}{\includegraphics[width=\paperwidth]{../img/cover-front}}
+% Foretitle
 \begin{titlepage}
 	\centering
 	\vspace*{1cm}
@@ -136,6 +134,6 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 \mbox{}
 \newpage
 \thispagestyle{empty}
-\mbox{}
+\putat{-21}{-390}{\includegraphics[width=\paperwidth]{../img/cover-back-en}}
 
 \end{document}
