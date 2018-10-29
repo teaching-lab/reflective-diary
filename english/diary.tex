@@ -15,6 +15,7 @@
 \usepackage{titlesec}              % Customize chapters
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} % Custom colors
 \usepackage{tikzsymbols}           % Smileys
+\usepackage{svg}                   % Including SVG images
 \usepackage{chronology}            % Timeline
 \usepackage{tikz}                  % Number lines
 \usepackage{url}                   % Enable URL typesetting
@@ -57,6 +58,9 @@
 % Smaller note (italics, gray)
 \newcommand{\note}[1]{\textcolor{gray}{\small\itshape #1}}
 \newcommand{\noteblack}[1]{{\small\itshape #1}}
+
+% accurate absolute positioning
+\newcommand{\putat}[3]{\begin{picture}(0,0)(0,0)\put(#1,#2){#3}\end{picture}}
 
 % ======= METADATA =======
 
@@ -108,19 +112,22 @@ We highly appreciate suggestions for improvement, notes on your experience or an
 
 Both source files and printable PDFs are available online at \url{github.com/teaching-lab/reflective-diary}.
 
-\bigskip
-\begin{minipage}{0.68\textwidth}
-This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course \textit{Teaching Lab} at the Faculty of Informatics, Masaryk University.
-\end{minipage}
-\begin{minipage}[t]{0.32\textwidth}
-\hfill\includegraphics[width=0.90\textwidth]{../img/muni}
+\medskip
+\begin{minipage}{0.28\textwidth}
+	\includegraphics[width=0.80\textwidth]{../img/muni}\hfill
+	\end{minipage}
+\begin{minipage}{0.72\textwidth}
+This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course \textit{Teaching Lab} at the Faculty of Informatics, Masaryk University with the cooperation of the Masaryk University Language Centre.
 \end{minipage}
 
-\begin{minipage}{0.32\textwidth}
-\includegraphics[width=0.95\textwidth]{../img/cc-by-nc-sa}
-\end{minipage}
-\begin{minipage}{0.68\textwidth}
+\medskip
+Our experience from using the diary is summarized in the following publication: M. Ukrop, V. Švábenský, J. Nehyba, \enquote{Reflective Diary for Professional Development of~Novice~Teachers}, in \textit{Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE)}, 2018.
+
+\begin{minipage}{0.72\textwidth}
 This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+\end{minipage}
+\begin{minipage}{0.28\textwidth}
+\hfill\includegraphics[width=0.90\textwidth]{../img/cc-by-nc-sa}
 \end{minipage}
 
 % ===== BACK COVER PAGE =====
