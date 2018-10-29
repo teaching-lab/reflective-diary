@@ -1,6 +1,8 @@
 # LaTeX temporary files
 *.aux
 *.log
+*.fdb_latexmk
+*.fls
 # Build documents
 *.pdf
 build/*

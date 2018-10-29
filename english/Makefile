@@ -6,15 +6,13 @@ PDFS=$(wildcard *.pdf)
 all: diary.pdf print-single.pdf print-double.pdf clean
 
 %.pdf : %.tex $(TEXS) $(IMAGES)
-	pdflatex $<
-	pdflatex $<
+	texfot latexmk -pdf $<
 
 %.pdf : ../print/%.tex $(TEXS) $(IMAGES)
-	pdflatex $<
-	pdflatex $<
+	texfot latexmk -pdf $<
 
 clean:
-	rm -f *.aux *.dvi *.log *.synctex.gz *.out *.nav *.toc *.snm *.run.xml *-blx.bib *.bbl *.blg *.bcf
+	latexmk -c diary ../print/print-single ../print/print-double
 
 remake:
 	rm -f $(PDF)
