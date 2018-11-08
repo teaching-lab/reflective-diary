@@ -15,7 +15,7 @@ The compiled version is available at GitHub (see the ['*releases*' tab](https://
 
 First and foremost, use it regularly.
 
-Note down your thoughts both when planning the lesson and after delivering it. There are thirteen spreads (one for each semester week), each suggesting a handful of questions. The diary is quite small -- it's partly to keep your notes short.
+Note down your thoughts both when planning the lesson and after delivering it. There are fourteen spreads (one for each semester week), each suggesting a handful of questions. The diary is quite small -- it's partly to keep your notes short.
 
 After the spreads for individual weeks, there is a teacher evaluation rubric, a list of indicators that can be evaluated, a list of some useful teaching tools, and some extra space for your notes and remarks.
 
@@ -38,7 +38,7 @@ Please email us at *teachinglab@fi.muni.cz*.
 
 <img align="right" width="210" height="60" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.svg" alt="Masaryk University" title="Masaryk University">
 
-This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course [*Teaching Lab*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics, Masaryk University](https://fi.muni.cz) with cooperation of the [Masary University Language Centre](https://www.cjv.muni.cz/en/).
+This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course [*Teaching Lab*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics, Masaryk University](https://fi.muni.cz) with cooperation of the [Masaryk University Language Centre](https://www.cjv.muni.cz/en/).
 
 ## Licence
 
