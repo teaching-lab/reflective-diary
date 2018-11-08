@@ -38,7 +38,7 @@ Please email us at *teachinglab@fi.muni.cz*.
 
 <img align="right" width="210" height="60" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.svg" alt="Masaryk University" title="Masaryk University">
 
-This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course [*Teaching Lab*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics, Masaryk University](https://fi.muni.cz).
+This diary was created by Martin Ukrop, Ondráš Přibyla, Valdemar Švábenský and Martin Macák for the course [*Teaching Lab*](https://is.muni.cz/predmet/fi/DUCIT) at the [Faculty of Informatics, Masaryk University](https://fi.muni.cz) with cooperation of the [Masary University Language Centre](https://www.cjv.muni.cz/en/).
 
 ## Licence
 
