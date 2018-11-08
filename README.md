@@ -34,6 +34,14 @@ Regularly using the reflective diary serves multiple purposes:
 We highly appreciate suggestions for improvement, notes on your experience or any other comments.  
 Please email us at *teachinglab@fi.muni.cz*.
 
+## Publication
+
+Our experience from using the diary is summarized in the following publication:
+
+M. Ukrop, V. Švábenský, J. Nehyba, Reflective Diary for Professional Development of Novice Teachers, in *Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE)*, 2019.
+
+You can access the preprint in the [ArXiv repository](https://arxiv.org/abs/1811.02965) or directly [view the PDF](https://arxiv.org/pdf/1811.02965.pdf).
+
 ## Authors
 
 <img align="right" width="210" height="60" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.svg" alt="Masaryk University" title="Masaryk University">
