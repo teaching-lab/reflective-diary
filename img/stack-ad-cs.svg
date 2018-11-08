@@ -14,7 +14,7 @@
    viewBox="0 0 105 148"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="stack-ad-cs.svg"
    inkscape:export-filename="/home/xukrop/Downloads/stack-reklama.png"
    inkscape:export-xdpi="96"
@@ -38,10 +38,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.6852558"
-     inkscape:cx="187.37271"
+     inkscape:cx="86.201125"
      inkscape:cy="301.90913"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g984"
      showgrid="false"
      units="mm"
      inkscape:snap-bbox="true"
@@ -50,10 +50,10 @@
      inkscape:snap-bbox-midpoints="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1016"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1">
     <sodipodi:guide
        position="-11.774918,5.0239654"
@@ -268,7 +268,7 @@
              width="345.32758"
              id="rect1639" /></flowRegion><flowPara
            id="flowPara1651"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333397px;line-height:0%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle;fill:#040404;fill-opacity:1;stroke:none">informatické koncepty. Každá aktivita v Stack-u</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333397px;line-height:0%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle;fill:#040404;fill-opacity:1;stroke:none">informatické koncepty. Každá aktivita v Stacku</flowPara><flowPara
            id="flowPara1653"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333397px;line-height:20.0000003%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle;fill:#040404;fill-opacity:1;stroke:none" /></flowRoot>      <flowRoot
          xml:space="preserve"
