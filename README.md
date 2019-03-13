@@ -40,7 +40,7 @@ Our experience from using the diary is summarized in the following publication:
 
 M. Ukrop, V. Švábenský, J. Nehyba, Reflective Diary for Professional Development of Novice Teachers, in *Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE)*, 2019.
 
-You can access the preprint in the [ArXiv repository](https://arxiv.org/abs/1811.02965) or directly [view the PDF](https://arxiv.org/pdf/1811.02965.pdf).
+The article is available in the [ACM Digital Library](https://dl.acm.org/citation.cfm?id=3287448). You can also access the preprint in the [ArXiv repository](https://arxiv.org/abs/1811.02965) or directly [view the PDF](https://arxiv.org/pdf/1811.02965.pdf).
 
 ## Authors
 
