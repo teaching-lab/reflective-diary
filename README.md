@@ -42,6 +42,26 @@ M. Ukrop, V. Švábenský, J. Nehyba, Reflective Diary for Professional Developm
 
 The article is available in the [ACM Digital Library](https://dl.acm.org/citation.cfm?id=3287448). You can also access the preprint in the [ArXiv repository](https://arxiv.org/abs/1811.02965) or directly [view the PDF](https://arxiv.org/pdf/1811.02965.pdf).
 
+To cite the diary, please use the following BibTeX entry:
+```bibtex
+@inproceedings{Ukrop2019reflective,
+    author    = {Ukrop, Martin and \v{S}v\'{a}bensk\'{y}, Valdemar and Nehyba, Jan},
+    title     = {{Reflective Diary for Professional Development of Novice Teachers}},
+    booktitle = {Proceedings of the 50th ACM Technical Symposium on Computer Science Education},
+    series    = {SIGCSE '19},
+    location  = {Minneapolis, MN, USA},
+    publisher = {Association for Computing Machinery},
+    address   = {New York, NY, USA},
+    month     = {02},
+    year      = {2019},
+    pages     = {1088--1094},
+    numpages  = {7},
+    isbn      = {978-1-4503-5890-3},
+    url       = {https://doi.org/10.1145/3287324.3287448},
+    doi       = {10.1145/3287324.3287448},
+}
+```
+
 ## Authors
 
 <img align="right" width="210" height="60" src="https://github.com/mukrop/teachers-reflective-diary/blob/master/img/muni.svg" alt="Masaryk University" title="Masaryk University">
